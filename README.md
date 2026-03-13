@@ -90,7 +90,9 @@ Use it when you need to answer:
 - `data/inch_unified_sizes.csv` (expanded inch sizes with UNC/UNF/UNEF columns)
 - `data/metric_iso_sizes.csv` (expanded metric sizes with coarse/fine pitches)
 - `data/inch_mm_conversion_chart.csv` (fractional inch to mm, 1/64 increments)
+- `data/through_hole_to_inch_screw_quick_chart.csv` (caliper-measured hole -> likely inch screw)
 - `docs/full-size-reference.md`
+- `docs/through-hole-caliper-quick-chart.md`
 - `images/inch-metric-conversion.svg`
 - `images/hole-selection-flow.svg`
 
