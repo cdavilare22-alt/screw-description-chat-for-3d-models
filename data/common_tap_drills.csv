@@ -1,0 +1,17 @@
+thread,system,tap_drill_label,tap_drill_mm,notes
+#4-40,UNC,#43,2.26,~75% thread typical
+#6-32,UNC,#36,2.71,~75% thread typical
+#8-32,UNC,#29,3.45,~75% thread typical
+#10-24,UNC,#25,3.80,~75% thread typical
+#10-32,UNF,#21,4.04,~75% thread typical
+1/4-20,UNC,#7,5.11,~75% thread typical
+5/16-18,UNC,F,6.53,~75% thread typical
+3/8-16,UNC,5/16,7.94,~75% thread typical
+1/2-13,UNC,27/64,10.72,~75% thread typical
+M3 x 0.5,Metric,2.5 mm,2.50,major - pitch rule
+M4 x 0.7,Metric,3.3 mm,3.30,major - pitch rule
+M5 x 0.8,Metric,4.2 mm,4.20,major - pitch rule
+M6 x 1.0,Metric,5.0 mm,5.00,major - pitch rule
+M8 x 1.25,Metric,6.8 mm,6.80,major - pitch rule
+M10 x 1.5,Metric,8.5 mm,8.50,major - pitch rule
+M12 x 1.75,Metric,10.2 mm,10.20,major - pitch rule

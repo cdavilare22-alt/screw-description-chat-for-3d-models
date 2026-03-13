@@ -1,0 +1,7 @@
+base_material,recommended_full_thread_engagement_x_diameter,example_M6_thread_depth_mm,notes
+Steel,1.0,6.0,Good thread strength in ductile steels
+Aluminum,1.5,9.0,Use longer engagement to reduce stripping risk
+Brass,1.5,9.0,Similar approach to aluminum
+Cast iron,1.0,6.0,Brittle material but thread holding is generally good
+Plastics,2.0,12.0,Prefer inserts if frequent assembly/disassembly
+Wood with insert,1.5,9.0,Use metal insert for repeat service

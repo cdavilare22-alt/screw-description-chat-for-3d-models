@@ -1,92 +1,93 @@
-# 3D Lab Best Practices Guide (Fusion 360 + PLA)
+# Screw Selection and Hole Sizing Guide (Fusion 360 + Shop Use)
 
-This guide is designed for engineers and lab members working with **Fusion 360**, **3D printed PLA parts**, **screws**, and **wiring**. It covers design guidelines, printing tips, parametric modeling, and practical hardware considerations.
+This repo is a practical reference for choosing screw sizes, picking the right hole diameter, and converting between metric and inch standards.
 
----
+Use it when you need to answer:
 
-## 1. Recommended Minimum Wall Thickness for Screws (PLA)
+- What drill size should I use for this screw?
+- Should this be a clearance hole, tapped hole, or pilot hole?
+- What is the closest metric/inch equivalent?
+- How deep should threads be for this material?
 
-| Screw Size | Clearance Hole Ø (PLA, tuned printer) | Min Wall Thickness | Usage Notes |
-|------------|---------------------------------------|------------------|-------------|
-| M3         | 3.03 mm                               | 5 mm             | Hinges, lids, light loads |
-| M4         | 4.03 mm                               | 6 mm             | Brackets, medium loads |
-| M5         | 5.03 mm                               | 7 mm             | Structural supports |
-| M6         | 6.03 mm                               | 8 mm             | Heavy duty joints |
-| M8         | 8.03 mm                               | 10 mm            | Very heavy duty, uncommon in PLA prints |
+## Start Here: 30-Second Decision Flow
 
-**Notes:** Hole diameters assume a +0.03 mm clearance for PLA prints. Adjust if your printer tends to under- or over-extrude.
+1. Identify the screw thread standard and size (`M6x1.0`, `1/4-20`, etc.).
+2. Decide hole function:
+   - `Clearance hole`: screw passes through this part.
+   - `Tapped hole`: threads are cut in this part.
+   - `Pilot hole`: wood/sheet-metal screw forms its own threads.
+3. Pull the value from the matching table:
+   - Clearance: `data/clearance_hole_sizes.csv`
+   - Tapped hole drill: `data/common_tap_drills.csv`
+   - Metric/inch comparison: `data/unified_coarse_to_metric.csv`, `data/metric_coarse_to_unified.csv`
+4. Confirm material and thickness:
+   - Thread engagement guidance: `data/material_thread_engagement.csv`
+   - Typical screw length ranges: `data/common_length_ranges.csv`
 
----
+## Core Rules (Beginner Safe)
 
-## 2. Screw & Hole Design Guidelines
+- Do not mix metric and inch threads even if they "almost fit".
+- For tapped holes, minimum thread engagement:
+  - Steel: `1.0 x screw diameter`
+  - Aluminum/brass: `1.5 x screw diameter`
+  - Plastics: `2.0 x screw diameter` or use inserts
+- If material is thinner than about `1.0 x diameter`, avoid direct tapping and use a nut/insert/rivnut.
+- Keep hole centers away from edges:
+  - Metal: at least `1.5 x diameter`
+  - Plastic/wood: at least `2.0 x diameter`
 
-- **Thread Engagement:** At least 2× screw diameter for direct PLA threads.  
-- **Torque Limits:** Avoid overtightening:  
-  - M3 → ≤ 0.5 Nm  
-  - M4 → ≤ 1.0 Nm  
-  - M5 → ≤ 2.0 Nm  
-- **Orientation:** Print holes along Z-axis to prevent layer splitting.  
-- **Reinforcement:** Use bosses (cylinder of extra material around holes) or ribs.  
-- **Material Choice:** PLA is fine for prototypes; PETG/ABS if repeated assembly is needed.  
-- **Infill & Walls:** ≥ 4 perimeters/walls and ≥ 30% infill around screw regions.  
-- **Chamfers & Fillets:** Always add at hole edges to reduce cracking.  
-- **Failure Modes:** Stripped threads, cracked walls, or insert pull-out.  
-- **Tolerance Testing:** Print a small test block with multiple hole sizes to check fit.
+## Quick Reference Tables
 
----
+### Common Tap Drill Sizes
 
-## 3. Fusion 360 Modeling Best Practices
+| Thread | Tap Drill |
+|---|---:|
+| M3 x 0.5 | 2.5 mm |
+| M4 x 0.7 | 3.3 mm |
+| M5 x 0.8 | 4.2 mm |
+| M6 x 1.0 | 5.0 mm |
+| M8 x 1.25 | 6.8 mm |
+| #6-32 | #36 (2.71 mm) |
+| #8-32 | #29 (3.45 mm) |
+| #10-24 | #25 (3.80 mm) |
+| 1/4-20 | #7 (5.11 mm) |
 
-- **Parametric Design:**  
-  - Use **User Parameters** for screw hole diameters, wall thickness, and boss height.  
-  - Example: `M3_Hole = 3.03 mm`, `Wall_Thick = 5 mm`, `Boss_Height = 5 mm`.  
-- **Sketch Constraints:** Fully constrain all hole positions and boss locations.  
-- **Bodies & Components:** Model each functional part as a separate **component** (lid, hinge, bracket).  
-- **Thread Features:** Fusion 360's **Thread tool** is optional; for PLA, direct drilled holes are usually sufficient.  
-- **Bosses & Fillets:** Use fillets at boss bases and chamfers at hole edges to reduce stress.  
-- **Joints:** Use **Rigid or Revolute joints** to simulate hinges, lids, or moving parts.  
-- **McMaster-Carr Models:** Use real-world screw models from McMaster-Carr for reference when designing bosses and holes.  
+### Common Clearance Holes (Pass-Through)
 
----
+| Thread | Close (mm) | Normal (mm) | Loose (mm) |
+|---|---:|---:|---:|
+| M4 | 4.3 | 4.5 | 4.8 |
+| M5 | 5.3 | 5.5 | 5.8 |
+| M6 | 6.4 | 6.6 | 7.0 |
+| M8 | 8.4 | 9.0 | 10.0 |
+| #8 | 4.3 | 4.5 | 4.8 |
+| #10 | 4.9 | 5.2 | 5.5 |
+| 1/4-20 | 6.6 | 6.8 | 7.1 |
 
-## 4. Printing Guidelines
+## Fusion 360 Notes
 
-- **Layer Height:** 0.15–0.2 mm for better hole accuracy.  
-- **Perimeters/Walls:** ≥ 4 near holes and bosses.  
-- **Infill Patterns:** Gyroid or cubic for isotropic strength.  
-- **Post-Processing:** Drill or ream holes if needed.  
-- **Support Material:** Only where necessary; avoid contact with screw holes.  
+- Use User Parameters for hole/tap sizes (`M6_Clearance_Normal`, `M6_TapDrill`, etc.).
+- Keep one parameter set per hardware system (metric vs inch).
+- Use named sketches/features so updates from table changes are easy.
+- For printed prototypes, model nominal holes and tune with printer-specific compensation after test prints.
 
----
+## 3D Printed Parts Notes (PLA/PETG)
 
-## 5. Mechanical & Load Considerations
+- Prefer heat-set inserts for repeated assembly.
+- Direct printed threads in PLA are acceptable for low-cycle, low-load use.
+- Around screw bosses: use at least 4 perimeters and moderate/high infill.
+- Add fillets at boss base and chamfers at hole entry to reduce cracking.
 
-- **Load Classification:** Map screw size to light/medium/heavy expected loads.  
-- **Stress Avoidance:** Avoid thin walls or sharp corners near load-bearing holes.  
-- **Reinforcement Features:** Bosses, ribs, gussets, fillets.  
+## Repository Layout
 
----
+- `SCREW_GUIDE.md`: one-page quick field guide
+- `data/unified_coarse_to_metric.csv`
+- `data/metric_coarse_to_unified.csv`
+- `data/common_tap_drills.csv`
+- `data/clearance_hole_sizes.csv`
+- `data/material_thread_engagement.csv`
+- `data/common_length_ranges.csv`
 
-## 6. Wiring & Electronics Integration
+## Scope
 
-- Maintain **minimum clearances** for wires and connectors.  
-- Include **cable channels or clips** in the model.  
-- Clearly mark **orientation and polarity** for connectors.  
-- Avoid pinching wires when assembling with screws and bosses.  
-
----
-
-## 7. Testing & Documentation
-
-- Print **tolerance test blocks** to verify hole and screw fit.  
-- Keep **assembly photos or logs** showing fits, torque, and wiring.  
-- Maintain **versioning** of CAD models when changing hole diameters, wall thickness, or inserts.  
-
----
-
-### Notes
-This guide is a living document. Update it whenever:  
-- Printer calibration changes hole fits.  
-- New screw sizes or inserts are added.  
-- Torque or material guidelines are revised.  
-- New wiring or electronics considerations arise.
+These tables are intended for design and shop decision support. For critical or safety-sensitive assemblies, verify against current standards and supplier data.

@@ -1,29 +1,58 @@
-# Screw Design Reference for 3D Printed PLA Parts
+# Screw and Hole Quick Guide
 
-## Recommended Minimum Wall Thickness
+## 1) Choose Hole Type First
 
-| Screw Size | Clearance Hole Ø (PLA, tuned printer) | Min Wall Thickness | Usage Notes |
-|------------|---------------------------------------|--------------------|-------------|
-| M3         | 3.03 mm                              | 5 mm               | Hinges, lids, light loads |
-| M4         | 4.03 mm                              | 6 mm               | Brackets, medium loads |
-| M6         | 6.03 mm                              | 8 mm               | Heavy duty joints |
-| M8         | 8.03 mm                              | 10 mm              | Very heavy duty, uncommon in PLA prints |
+- `Clearance hole`: screw goes through this part.
+- `Tapped hole`: this part holds screw threads.
+- `Pilot hole`: for wood/sheet-metal screws.
 
----
+## 2) Fast Picks
 
-## Design Guidelines for Screws in 3D Printed PLA Parts
+### Metric tap drills
 
-- **Thread Engagement:** At least 2× the screw diameter for direct PLA threads.  
-- **Torque:** Do not overtighten:  
-  - M3 → ≤ 0.5 Nm  
-  - M4 → ≤ 1.0 Nm  
-  - M5 → ≤ 2.0 Nm  
-- **Orientation:** Print screw bosses so the hole axis is vertical to avoid layer splitting.  
-- **Reinforcement:** Add bosses or ribs around holes for extra strength.  
-- **Material Choice:** PLA works for prototypes; PETG/ABS are better for repeated stress or higher loads.  
-- **Infill & Walls:** Use ≥ 4 perimeters/walls and ≥ 30% infill near screw regions.  
-- **Testing:** Print a tolerance test block before final parts to confirm clearance.  
-- **Failure Modes:**  
-  - Stripped threads → from overtightening.  
-  - Cracked walls → from thin walls or bad orientation.  
-  - Insert pull-out → if using inserts without enough surrounding wall.
+- M3 x 0.5 -> 2.5 mm
+- M4 x 0.7 -> 3.3 mm
+- M5 x 0.8 -> 4.2 mm
+- M6 x 1.0 -> 5.0 mm
+- M8 x 1.25 -> 6.8 mm
+
+### UNC tap drills
+
+- #6-32 -> #36 (2.71 mm)
+- #8-32 -> #29 (3.45 mm)
+- #10-24 -> #25 (3.80 mm)
+- 1/4-20 -> #7 (5.11 mm)
+
+### Common clearance holes
+
+- M4 -> 4.5 mm normal
+- M5 -> 5.5 mm normal
+- M6 -> 6.6 mm normal
+- M8 -> 9.0 mm normal
+- #10 -> 5.2 mm normal
+- 1/4-20 -> 6.8 mm normal
+
+## 3) Material-Based Thread Depth (Tapped Holes)
+
+- Steel: `1.0 x diameter`
+- Aluminum/brass: `1.5 x diameter`
+- Plastics: `2.0 x diameter` (or insert)
+
+Example: M6 in aluminum -> target around `9 mm` of full thread.
+
+## 4) Beginner Mistakes to Avoid
+
+- Mixing metric and inch screws
+- Using clearance drill size when you needed a tap drill
+- Ignoring pitch (`M6x1.0` and `M6x0.75` are different)
+- Tapping very thin material instead of using inserts/nuts
+
+## 5) 3D Print Notes
+
+- Start with inserts for repeat assembly.
+- Use extra material around holes (boss + fillet).
+- Print test coupons to validate hole fit before final prints.
+
+## 6) Detailed Tables
+
+Use full CSVs in `data/` for exact values and more sizes.
