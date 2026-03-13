@@ -95,6 +95,7 @@ Use it when you need to answer:
 - `data/nut_trap_sizes_hex.csv` (recommended hex nut pocket dimensions)
 - `data/washer_od_id_chart.csv` (typical washer OD/ID/thickness)
 - `data/pipe_nominal_to_actual_od_quick_chart.csv` (NPS nominal -> actual OD + pass-hole starters)
+- `data/caliper_to_pipe_clamp_size_crosswalk.csv` (measured OD -> likely clamp label)
 - `docs/full-size-reference.md`
 - `docs/through-hole-caliper-quick-chart.md`
 - `docs/through-hole-caliper-quick-chart-metric.md`
