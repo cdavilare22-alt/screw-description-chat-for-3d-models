@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" role="img" aria-label="Panel build specialty tools overview">
+  <rect width="1400" height="980" fill="#f4f7fb"/>
+  <text x="50" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#1f2d3d">Panel Build Specialty Tools</text>
+  <text x="50" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#40566b">Control panels, PCB mounts, and plastic enclosure work</text>
+
+  <defs>
+    <style>
+      .card { fill: #ffffff; stroke: #c7d2e0; stroke-width: 2; }
+      .title { font: 700 19px 'Segoe UI', Arial, sans-serif; fill: #1f2d3d; }
+      .desc { font: 15px 'Segoe UI', Arial, sans-serif; fill: #4a6075; }
+      .icon { stroke: #2f6ea1; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+
+  <g transform="translate(40,140)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Step Drill Bit (Unibit)</text>
+    <circle class="icon" cx="55" cy="85" r="20"/>
+    <path class="icon" d="M75 65 L105 95 L75 125"/>
+    <text class="desc" x="130" y="82">Clean hole enlargement</text>
+    <text class="desc" x="130" y="104">for sheet and plastic</text>
+  </g>
+
+  <g transform="translate(490,140)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Knockout Punch Set</text>
+    <rect class="icon" x="35" y="66" width="48" height="40" rx="8"/>
+    <circle class="icon" cx="105" cy="86" r="18"/>
+    <text class="desc" x="130" y="82">Precision round panel holes</text>
+    <text class="desc" x="130" y="104">for glands/connectors</text>
+  </g>
+
+  <g transform="translate(940,140)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Deburring Tool</text>
+    <path class="icon" d="M35 110 L90 60 L110 80 L55 130 Z"/>
+    <text class="desc" x="130" y="82">Removes sharp edges</text>
+    <text class="desc" x="130" y="104">after drilling/cutting</text>
+  </g>
+
+  <g transform="translate(40,320)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Countersink Bit</text>
+    <path class="icon" d="M40 65 L90 65 L65 120 Z"/>
+    <text class="desc" x="130" y="82">Breaks hole edge,</text>
+    <text class="desc" x="130" y="104">reduces cracking</text>
+  </g>
+
+  <g transform="translate(490,320)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Torque Screwdriver</text>
+    <rect class="icon" x="38" y="68" width="62" height="22" rx="10"/>
+    <line class="icon" x1="100" y1="79" x2="124" y2="79"/>
+    <text class="desc" x="130" y="82">Repeatable terminal and</text>
+    <text class="desc" x="130" y="104">mounting screw torque</text>
+  </g>
+
+  <g transform="translate(940,320)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Ferrule Crimper</text>
+    <path class="icon" d="M35 70 L75 110 M75 70 L35 110"/>
+    <rect class="icon" x="80" y="72" width="30" height="36" rx="6"/>
+    <text class="desc" x="130" y="82">Reliable stranded wire</text>
+    <text class="desc" x="130" y="104">termination quality</text>
+  </g>
+
+  <g transform="translate(40,500)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Wire Marker + Heat Shrink</text>
+    <rect class="icon" x="35" y="70" width="70" height="36" rx="6"/>
+    <text class="desc" x="130" y="82">Readable labels for</text>
+    <text class="desc" x="130" y="104">maintenance/troubleshooting</text>
+  </g>
+
+  <g transform="translate(490,500)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Pitch Gauge + Calipers</text>
+    <line class="icon" x1="35" y1="110" x2="110" y2="110"/>
+    <line class="icon" x1="35" y1="85" x2="110" y2="85"/>
+    <text class="desc" x="130" y="82">Fast hardware/thread ID</text>
+    <text class="desc" x="130" y="104">before modeling</text>
+  </g>
+
+  <g transform="translate(940,500)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">ESD Mat + Wrist Strap</text>
+    <rect class="icon" x="35" y="82" width="78" height="28" rx="4"/>
+    <circle class="icon" cx="55" cy="73" r="8"/>
+    <text class="desc" x="130" y="82">Static-safe PCB handling</text>
+    <text class="desc" x="130" y="104">during assembly</text>
+  </g>
+
+  <g transform="translate(490,680)">
+    <rect class="card" x="0" y="0" width="420" height="150" rx="12"/>
+    <text class="title" x="20" y="36">Grommet/Cable Gland Kit</text>
+    <circle class="icon" cx="58" cy="88" r="20"/>
+    <circle class="icon" cx="58" cy="88" r="8"/>
+    <text class="desc" x="130" y="82">Strain relief and cable</text>
+    <text class="desc" x="130" y="104">edge protection</text>
+  </g>
+
+  <text x="50" y="940" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5c7287">Use this as a quick field memory aid; see docs/panel-tools-field-guide.md for details.</text>
+</svg>

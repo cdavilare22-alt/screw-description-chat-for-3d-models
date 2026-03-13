@@ -119,3 +119,10 @@ Use it when you need to answer:
 ## Scope
 
 These tables are intended for design and shop decision support. For critical or safety-sensitive assemblies, verify against current standards and supplier data.
+
+## Panel Tools Section
+
+Specialized tools for control-panel, PCB, and plastics work:
+
+- `docs/panel-tools-field-guide.md`
+- `images/panel-tools-overview.svg`
