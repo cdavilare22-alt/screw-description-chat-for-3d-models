@@ -1,0 +1,10 @@
+voltage_system,typical_use,notes
+5V DC,Logic electronics and small USB-powered devices,Common on PCB rails
+12V DC,Automotive and control accessories,Common for relays/fans/LED strips
+24V DC,Industrial controls and sensors,Common PLC/control panel voltage
+48V DC,Telecom and some battery systems,Lower current for same power than 24V
+120V AC,General receptacles and small loads,Common U.S. branch circuit voltage
+208V AC 3-phase,Commercial 3-phase systems,From 120/208V wye systems
+240V AC split-phase,Heaters/large appliances and some tools,Common residential heavy loads
+277V AC,Commercial lighting circuits,From 277/480V systems
+480V AC 3-phase,Industrial motors and large equipment,Lower current for same power than 240V

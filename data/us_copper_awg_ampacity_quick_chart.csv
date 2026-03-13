@@ -1,0 +1,14 @@
+awg,copper_ampacity_60c_a,copper_ampacity_75c_a,copper_ampacity_90c_a,common_breaker_pairing_note
+14,15,20,25,Typically paired with 15A breaker in building wiring
+12,20,25,30,Typically paired with 20A breaker
+10,30,35,40,Typically paired with 30A breaker
+8,40,50,55,Common for 40-50A loads depending on termination rating
+6,55,65,75,Common for 60A circuits depending on conditions
+4,70,85,95,Used for larger feeders/equipment
+3,85,100,110,Used for larger feeders/equipment
+2,95,115,130,Used for larger feeders/equipment
+1,110,130,145,Used for larger feeders/equipment
+1/0,125,150,170,Often used for 125-150A feeders
+2/0,145,175,195,Often used for 150-175A feeders
+3/0,165,200,225,Often used for 200A class feeders
+4/0,195,230,260,Large conductors for high-current feeders

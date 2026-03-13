@@ -1,0 +1,8 @@
+scenario,formula,what_it_means,quick_example
+DC or single-phase resistive,P = V x I,Power in watts equals volts times amps,120V x 2A = 240W
+Find current from power,I = P / V,Current needed for a load at a given voltage,1500W / 120V = 12.5A
+Find voltage from power,V = P / I,Required supply voltage for load and current,240W / 2A = 120V
+Resistance law,Ohms law: V = I x R,Voltage drop across resistance,2A x 5ohm = 10V
+Power from resistance,P = I^2 x R,Heat in wire/components due to current,10A^2 x 0.1ohm = 10W
+Single-phase AC apparent power,VA = V x I,Used for transformer/UPS/inverter sizing,120V x 5A = 600VA
+Three-phase AC (line-line),P ~= 1.732 x V x I x PF,Real power with power factor,1.732 x 480 x 10 x 0.9 = 7.48kW

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-label="Electrical basics and wire sizing cheat sheet">
+  <rect width="1400" height="920" fill="#f6fbf8"/>
+  <text x="50" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#1d3557">Electrical Basics Cheat Sheet</text>
+  <text x="50" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#355070">Amps, volts, watts, and quick wire-size memory</text>
+
+  <rect x="50" y="140" width="640" height="260" rx="14" fill="#ffffff" stroke="#c3d5e6"/>
+  <text x="80" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d3557">Core Formulas</text>
+  <text x="80" y="230" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">W = V x A</text>
+  <text x="80" y="270" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">A = W / V</text>
+  <text x="80" y="310" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">V = W / A</text>
+  <text x="80" y="350" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">Vdrop = I x R</text>
+
+  <rect x="730" y="140" width="620" height="260" rx="14" fill="#ffffff" stroke="#c3d5e6"/>
+  <text x="760" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d3557">Term Meanings</text>
+  <text x="760" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">Voltage (V): electrical pressure</text>
+  <text x="760" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">Current (A): electrical flow</text>
+  <text x="760" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">Power (W): work rate</text>
+  <text x="760" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">Resistance: opposition to flow</text>
+
+  <rect x="50" y="430" width="640" height="420" rx="14" fill="#ffffff" stroke="#c3d5e6"/>
+  <text x="80" y="478" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d3557">Quick U.S. Copper Memory</text>
+  <text x="80" y="530" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">14 AWG -> 15A</text>
+  <text x="80" y="575" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">12 AWG -> 20A</text>
+  <text x="80" y="620" font-family="Consolas, monospace" font-size="30" fill="#2b2d42">10 AWG -> 30A</text>
+  <text x="80" y="680" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#33415c">Use this as a starting point only.</text>
+  <text x="80" y="712" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#33415c">Final sizing depends on insulation,</text>
+  <text x="80" y="742" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#33415c">temperature rating, and installation method.</text>
+
+  <rect x="730" y="430" width="620" height="420" rx="14" fill="#ffffff" stroke="#c3d5e6"/>
+  <text x="760" y="478" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d3557">Load Current Examples</text>
+  <text x="760" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">1200W at 120V -> 10A</text>
+  <text x="760" y="570" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">1500W at 120V -> 12.5A</text>
+  <text x="760" y="610" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#33415c">1500W at 240V -> 6.25A</text>
+  <text x="760" y="665" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#33415c">Higher voltage -> lower current for same power.</text>
+  <text x="760" y="700" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#33415c">Lower current usually means less voltage drop.</text>
+
+  <text x="50" y="895" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5a7184">Reference aid for planning and learning; verify code and equipment requirements before final installation.</text>
+</svg>

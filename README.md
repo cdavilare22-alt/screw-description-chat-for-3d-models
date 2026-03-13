@@ -126,3 +126,14 @@ Specialized tools for control-panel, PCB, and plastics work:
 
 - `docs/panel-tools-field-guide.md`
 - `images/panel-tools-overview.svg`
+
+## Electrical Basics Section
+
+Wire sizing and core electrical terms for day-to-day panel work:
+
+- `docs/electrical-basics-wire-sizing.md`
+- `data/us_copper_awg_ampacity_quick_chart.csv`
+- `data/awg_common_sizes_reference.csv`
+- `data/electrical_power_formula_cheatsheet.csv`
+- `data/common_voltage_levels_us_quick_reference.csv`
+- `images/electrical-basics-cheatsheet.svg`
