@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Inch to metric conversion quick chart">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3f6ff"/>
+      <stop offset="100%" stop-color="#e8f7f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <text x="60" y="80" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" fill="#102a43">Inch to Metric Quick Conversion</text>
+  <text x="60" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#334e68">Formula: mm = inches x 25.4</text>
+
+  <rect x="60" y="160" width="1080" height="520" rx="16" fill="#ffffff" stroke="#bcccdc"/>
+
+  <text x="100" y="210" font-family="Consolas, monospace" font-size="24" font-weight="700" fill="#102a43">Fraction</text>
+  <text x="340" y="210" font-family="Consolas, monospace" font-size="24" font-weight="700" fill="#102a43">Decimal in</text>
+  <text x="620" y="210" font-family="Consolas, monospace" font-size="24" font-weight="700" fill="#102a43">Millimeters</text>
+  <text x="900" y="210" font-family="Consolas, monospace" font-size="24" font-weight="700" fill="#102a43">Common Use</text>
+
+  <g font-family="Consolas, monospace" font-size="24" fill="#243b53">
+    <text x="100" y="260">1/16</text><text x="340" y="260">0.0625</text><text x="620" y="260">1.588 mm</text><text x="900" y="260">Shims / small gaps</text>
+    <text x="100" y="305">1/8</text><text x="340" y="305">0.1250</text><text x="620" y="305">3.175 mm</text><text x="900" y="305">Thin brackets</text>
+    <text x="100" y="350">3/16</text><text x="340" y="350">0.1875</text><text x="620" y="350">4.763 mm</text><text x="900" y="350">Small plates</text>
+    <text x="100" y="395">1/4</text><text x="340" y="395">0.2500</text><text x="620" y="395">6.350 mm</text><text x="900" y="395">Common bolt size</text>
+    <text x="100" y="440">5/16</text><text x="340" y="440">0.3125</text><text x="620" y="440">7.938 mm</text><text x="900" y="440">Medium hardware</text>
+    <text x="100" y="485">3/8</text><text x="340" y="485">0.3750</text><text x="620" y="485">9.525 mm</text><text x="900" y="485">Brackets / mounts</text>
+    <text x="100" y="530">1/2</text><text x="340" y="530">0.5000</text><text x="620" y="530">12.700 mm</text><text x="900" y="530">Structural joints</text>
+    <text x="100" y="575">3/4</text><text x="340" y="575">0.7500</text><text x="620" y="575">19.050 mm</text><text x="900" y="575">Heavy assemblies</text>
+    <text x="100" y="620">1</text><text x="340" y="620">1.0000</text><text x="620" y="620">25.400 mm</text><text x="900" y="620">Large bolts</text>
+  </g>
+
+  <text x="60" y="720" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#486581">For the full chart (1/64 increments), see data/inch_mm_conversion_chart.csv</text>
+</svg>

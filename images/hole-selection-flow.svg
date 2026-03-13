@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Hole selection decision flow">
+  <rect width="1200" height="720" fill="#f7f7f2"/>
+  <text x="60" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#2d3142">Hole Selection Flow</text>
+  <text x="60" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#4f5d75">Choose the right hole before picking drill size</text>
+
+  <rect x="80" y="170" width="300" height="120" rx="14" fill="#d9f0ff" stroke="#3a86ff" stroke-width="3"/>
+  <text x="105" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1b4965">Need threads in this part?</text>
+
+  <rect x="460" y="90" width="300" height="130" rx="14" fill="#eafcd8" stroke="#2a9d8f" stroke-width="3"/>
+  <text x="490" y="140" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1f513a">YES</text>
+  <text x="490" y="175" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#1f513a">Use tap drill table</text>
+
+  <rect x="460" y="260" width="300" height="130" rx="14" fill="#ffe8cc" stroke="#ff9f1c" stroke-width="3"/>
+  <text x="490" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#7a4b00">NO</text>
+  <text x="490" y="345" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#7a4b00">Use clearance hole table</text>
+
+  <rect x="840" y="90" width="300" height="130" rx="14" fill="#ffffff" stroke="#6c757d" stroke-width="3"/>
+  <text x="870" y="142" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2d3142">Check thread depth:</text>
+  <text x="870" y="175" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2d3142">Steel 1.0x dia</text>
+  <text x="870" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2d3142">Aluminum 1.5x dia</text>
+
+  <rect x="840" y="260" width="300" height="130" rx="14" fill="#ffffff" stroke="#6c757d" stroke-width="3"/>
+  <text x="870" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2d3142">Fit choice:</text>
+  <text x="870" y="345" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2d3142">Close / Normal / Loose</text>
+
+  <rect x="320" y="500" width="560" height="140" rx="14" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <text x="350" y="555" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#2d3142">Critical reminder</text>
+  <text x="350" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2d3142">Do not mix metric and inch hardware even if it almost fits.</text>
+
+  <line x1="380" y1="230" x2="460" y2="155" stroke="#495057" stroke-width="4"/>
+  <polygon points="460,155 446,156 454,167" fill="#495057"/>
+  <line x1="380" y1="230" x2="460" y2="325" stroke="#495057" stroke-width="4"/>
+  <polygon points="460,325 454,313 446,324" fill="#495057"/>
+  <line x1="760" y1="155" x2="840" y2="155" stroke="#495057" stroke-width="4"/>
+  <polygon points="840,155 828,148 828,162" fill="#495057"/>
+  <line x1="760" y1="325" x2="840" y2="325" stroke="#495057" stroke-width="4"/>
+  <polygon points="840,325 828,318 828,332" fill="#495057"/>
+</svg>

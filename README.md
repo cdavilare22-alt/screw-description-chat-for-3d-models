@@ -87,6 +87,22 @@ Use it when you need to answer:
 - `data/clearance_hole_sizes.csv`
 - `data/material_thread_engagement.csv`
 - `data/common_length_ranges.csv`
+- `data/inch_unified_sizes.csv` (expanded inch sizes with UNC/UNF/UNEF columns)
+- `data/metric_iso_sizes.csv` (expanded metric sizes with coarse/fine pitches)
+- `data/inch_mm_conversion_chart.csv` (fractional inch to mm, 1/64 increments)
+- `docs/full-size-reference.md`
+- `images/inch-metric-conversion.svg`
+- `images/hole-selection-flow.svg`
+
+## Visual References
+
+### Inch-Metric Conversion
+
+![Inch to metric conversion chart](images/inch-metric-conversion.svg)
+
+### Hole Selection Flow
+
+![Hole type decision flow](images/hole-selection-flow.svg)
 
 ## Scope
 
