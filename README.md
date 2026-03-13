@@ -1,135 +1,51 @@
-# Screw Selection and Hole Sizing Guide (Fusion 360 + Shop Use)
+# Shop Reference: Mechanical + Electrical
 
-This repo is a practical reference for choosing screw sizes, picking the right hole diameter, and converting between metric and inch standards.
+This repo is now split into two clear sections.
 
-Use it when you need to answer:
+## 1) Screw Sizes, 3D Modeling, and Measuring
 
-- What drill size should I use for this screw?
-- Should this be a clearance hole, tapped hole, or pilot hole?
-- What is the closest metric/inch equivalent?
-- How deep should threads be for this material?
+Use this section for:
 
-## Start Here: 30-Second Decision Flow
+- Screw and tap sizes (inch + metric)
+- Through-hole measurement with calipers
+- Fusion 360 parameter-driven mount design
+- Nut/bolt mounting details (nut traps, washer sizing, bolt length)
+- Pipe/clamp sizing for printed mounts
 
-1. Identify the screw thread standard and size (`M6x1.0`, `1/4-20`, etc.).
-2. Decide hole function:
-   - `Clearance hole`: screw passes through this part.
-   - `Tapped hole`: threads are cut in this part.
-   - `Pilot hole`: wood/sheet-metal screw forms its own threads.
-3. Pull the value from the matching table:
-   - Clearance: `data/clearance_hole_sizes.csv`
-   - Tapped hole drill: `data/common_tap_drills.csv`
-   - Metric/inch comparison: `data/unified_coarse_to_metric.csv`, `data/metric_coarse_to_unified.csv`
-4. Confirm material and thickness:
-   - Thread engagement guidance: `data/material_thread_engagement.csv`
-   - Typical screw length ranges: `data/common_length_ranges.csv`
+Entry point:
 
-## Core Rules (Beginner Safe)
+- `docs/mechanical-fasteners-index.md`
 
-- Do not mix metric and inch threads even if they "almost fit".
-- For tapped holes, minimum thread engagement:
-  - Steel: `1.0 x screw diameter`
-  - Aluminum/brass: `1.5 x screw diameter`
-  - Plastics: `2.0 x screw diameter` or use inserts
-- If material is thinner than about `1.0 x diameter`, avoid direct tapping and use a nut/insert/rivnut.
-- Keep hole centers away from edges:
-  - Metal: at least `1.5 x diameter`
-  - Plastic/wood: at least `2.0 x diameter`
+Most-used mechanical files:
 
-## Quick Reference Tables
-
-### Common Tap Drill Sizes
-
-| Thread | Tap Drill |
-|---|---:|
-| M3 x 0.5 | 2.5 mm |
-| M4 x 0.7 | 3.3 mm |
-| M5 x 0.8 | 4.2 mm |
-| M6 x 1.0 | 5.0 mm |
-| M8 x 1.25 | 6.8 mm |
-| #6-32 | #36 (2.71 mm) |
-| #8-32 | #29 (3.45 mm) |
-| #10-24 | #25 (3.80 mm) |
-| 1/4-20 | #7 (5.11 mm) |
-
-### Common Clearance Holes (Pass-Through)
-
-| Thread | Close (mm) | Normal (mm) | Loose (mm) |
-|---|---:|---:|---:|
-| M4 | 4.3 | 4.5 | 4.8 |
-| M5 | 5.3 | 5.5 | 5.8 |
-| M6 | 6.4 | 6.6 | 7.0 |
-| M8 | 8.4 | 9.0 | 10.0 |
-| #8 | 4.3 | 4.5 | 4.8 |
-| #10 | 4.9 | 5.2 | 5.5 |
-| 1/4-20 | 6.6 | 6.8 | 7.1 |
-
-## Fusion 360 Notes
-
-- Use User Parameters for hole/tap sizes (`M6_Clearance_Normal`, `M6_TapDrill`, etc.).
-- Keep one parameter set per hardware system (metric vs inch).
-- Use named sketches/features so updates from table changes are easy.
-- For printed prototypes, model nominal holes and tune with printer-specific compensation after test prints.
-
-## 3D Printed Parts Notes (PLA/PETG)
-
-- Prefer heat-set inserts for repeated assembly.
-- Direct printed threads in PLA are acceptable for low-cycle, low-load use.
-- Around screw bosses: use at least 4 perimeters and moderate/high infill.
-- Add fillets at boss base and chamfers at hole entry to reduce cracking.
-
-## Repository Layout
-
-- `SCREW_GUIDE.md`: one-page quick field guide
-- `data/unified_coarse_to_metric.csv`
-- `data/metric_coarse_to_unified.csv`
-- `data/common_tap_drills.csv`
-- `data/clearance_hole_sizes.csv`
-- `data/material_thread_engagement.csv`
-- `data/common_length_ranges.csv`
-- `data/inch_unified_sizes.csv` (expanded inch sizes with UNC/UNF/UNEF columns)
-- `data/metric_iso_sizes.csv` (expanded metric sizes with coarse/fine pitches)
-- `data/inch_mm_conversion_chart.csv` (fractional inch to mm, 1/64 increments)
-- `data/through_hole_to_inch_screw_quick_chart.csv` (caliper-measured hole -> likely inch screw)
-- `data/through_hole_to_metric_screw_quick_chart.csv` (caliper-measured hole -> likely metric screw)
-- `data/nut_trap_sizes_hex.csv` (recommended hex nut pocket dimensions)
-- `data/washer_od_id_chart.csv` (typical washer OD/ID/thickness)
-- `data/pipe_nominal_to_actual_od_quick_chart.csv` (NPS nominal -> actual OD + pass-hole starters)
-- `data/caliper_to_pipe_clamp_size_crosswalk.csv` (measured OD -> likely clamp label)
-- `docs/full-size-reference.md`
+- `SCREW_GUIDE.md`
 - `docs/through-hole-caliper-quick-chart.md`
 - `docs/through-hole-caliper-quick-chart-metric.md`
-- `docs/nut-and-bolt-mount-recipes.md`
-- `docs/bolt-length-selector.md`
 - `docs/fusion-360-nut-bolt-params.md`
-- `docs/pipe-size-quick-chart.md`
+- `docs/nut-and-bolt-mount-recipes.md`
+- `data/common_tap_drills.csv`
+- `data/clearance_hole_sizes.csv`
+
+Mechanical visuals:
+
 - `images/inch-metric-conversion.svg`
 - `images/hole-selection-flow.svg`
-
-## Visual References
-
-### Inch-Metric Conversion
-
-![Inch to metric conversion chart](images/inch-metric-conversion.svg)
-
-### Hole Selection Flow
-
-![Hole type decision flow](images/hole-selection-flow.svg)
-
-## Scope
-
-These tables are intended for design and shop decision support. For critical or safety-sensitive assemblies, verify against current standards and supplier data.
-
-## Panel Tools Section
-
-Specialized tools for control-panel, PCB, and plastics work:
-
-- `docs/panel-tools-field-guide.md`
 - `images/panel-tools-overview.svg`
 
-## Electrical Basics Section
+## 2) Wire, Cable, and Electrical Energy Basics
 
-Wire sizing and core electrical terms for day-to-day panel work:
+Use this section for:
+
+- AWG sizes and ampacity reference
+- Understanding amps, volts, watts, and basic power math
+- Common voltage system references
+- Quick conductor selection starting points
+
+Entry point:
+
+- `docs/electrical-wire-index.md`
+
+Most-used electrical files:
 
 - `docs/electrical-basics-wire-sizing.md`
 - `data/us_copper_awg_ampacity_quick_chart.csv`
@@ -137,3 +53,8 @@ Wire sizing and core electrical terms for day-to-day panel work:
 - `data/electrical_power_formula_cheatsheet.csv`
 - `data/common_voltage_levels_us_quick_reference.csv`
 - `images/electrical-basics-cheatsheet.svg`
+
+## Scope and Safety
+
+These files are practical field references for design and planning.
+Final mechanical and electrical decisions must be verified against actual hardware specs, equipment ratings, and local code requirements.
