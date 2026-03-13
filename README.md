@@ -92,9 +92,14 @@ Use it when you need to answer:
 - `data/inch_mm_conversion_chart.csv` (fractional inch to mm, 1/64 increments)
 - `data/through_hole_to_inch_screw_quick_chart.csv` (caliper-measured hole -> likely inch screw)
 - `data/through_hole_to_metric_screw_quick_chart.csv` (caliper-measured hole -> likely metric screw)
+- `data/nut_trap_sizes_hex.csv` (recommended hex nut pocket dimensions)
+- `data/washer_od_id_chart.csv` (typical washer OD/ID/thickness)
 - `docs/full-size-reference.md`
 - `docs/through-hole-caliper-quick-chart.md`
 - `docs/through-hole-caliper-quick-chart-metric.md`
+- `docs/nut-and-bolt-mount-recipes.md`
+- `docs/bolt-length-selector.md`
+- `docs/fusion-360-nut-bolt-params.md`
 - `images/inch-metric-conversion.svg`
 - `images/hole-selection-flow.svg`
 

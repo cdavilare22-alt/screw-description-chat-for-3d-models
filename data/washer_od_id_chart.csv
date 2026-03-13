@@ -1,0 +1,13 @@
+thread_size,washer_series,typical_id_mm,typical_od_mm,typical_thickness_mm,notes
+M3,ISO normal,3.2,7.0,0.5,Small machine screw washers
+M4,ISO normal,4.3,9.0,0.8,General purpose washers
+M5,ISO normal,5.3,10.0,1.0,General purpose washers
+M6,ISO normal,6.4,12.0,1.6,Common bracket hardware
+M8,ISO normal,8.4,16.0,1.6,Medium structural hardware
+M10,ISO normal,10.5,20.0,2.0,Heavier clamping
+#6,SAE/USS typical,3.7,9.1,0.8,Common inch washer range
+#8,SAE/USS typical,4.5,11.1,1.0,Common inch washer range
+#10,SAE/USS typical,5.5,12.7,1.0,Common inch washer range
+1/4,SAE/USS typical,6.9,18.0,1.6,Common inch washer range
+5/16,SAE/USS typical,8.7,22.0,1.6,Common inch washer range
+3/8,SAE/USS typical,10.5,24.0,2.0,Common inch washer range
