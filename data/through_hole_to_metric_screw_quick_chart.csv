@@ -1,0 +1,12 @@
+measured_hole_min_mm,measured_hole_max_mm,measured_hole_min_in,measured_hole_max_in,likely_metric_screw,typical_normal_clearance_mm,notes
+1.8,2.3,0.071,0.091,M2,2.2,Small electronics and light brackets
+2.3,2.8,0.091,0.110,M2.5,2.7,Small enclosures and panels
+2.8,3.4,0.110,0.134,M3,3.4,Very common in 3D prints/electronics
+3.4,4.3,0.134,0.169,M4,4.5,General brackets and mechanisms
+4.3,5.3,0.169,0.209,M5,5.5,Medium load joints
+5.3,6.4,0.209,0.252,M6,6.6,Common machine assembly size
+6.4,8.4,0.252,0.331,M8,9.0,Medium structural hardware
+8.4,10.5,0.331,0.413,M10,11.0,Heavier brackets and frames
+10.5,12.5,0.413,0.492,M12,13.5,Heavy-duty joints
+12.5,14.5,0.492,0.571,M14,15.5,Larger structural hardware
+14.5,16.5,0.571,0.650,M16,17.5,High-load bolting
