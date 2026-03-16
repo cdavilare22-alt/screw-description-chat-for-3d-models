@@ -303,6 +303,15 @@ Examples:
 | 3/0 | 165 | 200 | 225 | 200A class feeders |
 | 4/0 | 195 | 230 | 260 | High-current feeders |
 
+How to choose `60C` vs `75C` vs `90C`:
+
+- These are insulation/termination temperature ratings that affect allowable ampacity.
+- Use the ampacity column that matches the lowest-rated part in the circuit path:
+  wire insulation, terminals/lugs/devices, and equipment listing.
+- If any connected termination is `60C`, size from the `60C` column even if wire is `90C`.
+- Higher temperature columns can allow more current, but only when all relevant ratings permit it.
+- Apply required derating for ambient temperature, conductor bundling, and installation conditions.
+
 ### 4) Common AWG Sizes Reference
 
 | AWG | Dia (mm) | Dia (in) | Ohms/1000ft Cu @20C | Typical Use |

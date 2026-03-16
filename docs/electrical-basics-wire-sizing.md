@@ -52,6 +52,15 @@ Examples:
 4. Check run length for voltage drop (longer run may need larger wire).
 5. Confirm terminals are rated for selected wire size and temperature class.
 
+## How To Use 60C / 75C / 90C Ampacity Ratings
+
+- `60C`, `75C`, and `90C` are temperature ratings tied to insulation and terminations.
+- Ampacity increases across those columns for the same gauge, but you cannot always use the highest one.
+- Final conductor ampacity is limited by the lowest-rated component in the path:
+  wire insulation, lugs/terminals/devices, and equipment listing.
+- Example: if wire is `90C` but connected terminations are only `60C`, size from `60C`.
+- Then apply any additional derating required by ambient temperature and conductor bundling.
+
 ## Breaker Basics (What They Are and How They Work)
 
 What a breaker is:
