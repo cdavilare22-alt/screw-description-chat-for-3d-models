@@ -133,3 +133,71 @@ Use this as a practical training checklist. Control labels vary by machine (`Fan
 - Tool length offset method:
 - Safe startup block used at this shop:
 - Common alarms and fixes:
+
+## Model-Specific Cheat Sheet (Fill This First)
+
+Use this section as the exact operating reference for your machine model.
+
+- Machine make/model:
+- Controller model/version:
+- Axis travel limits (X/Y/Z):
+- Default mode for startup:
+- Exact button for `AUTO`:
+- Exact button for `MDI`:
+- Exact button for `JOG/HANDLE`:
+- Exact key sequence to open work offset page (`G54`):
+- Exact key sequence to open tool offset page (`H`/length):
+- Tool-change procedure used on this machine (`T#`, `M6`, ATC key flow):
+- Spindle warm-up routine:
+- Safe retract position before tool change:
+- Required overrides for first prove-out run:
+
+## Red-Ball Probe Workflow (Touch Probe / Electronic Edge Finder)
+
+If your machine uses a conductive stem with a red ball and touch detection, follow this process.
+
+### What It Does
+
+- Detects contact location between probe ball and work surface.
+- Software/macro compensates by probe radius (`ball diameter / 2`) to find true edge/center.
+
+### Setup
+
+1. Confirm probe is electrically detected (touch test in diagnostics if available).
+2. Enter probe ball diameter exactly in the probing macro/settings.
+3. Set low jog/feed for probing moves.
+4. Ensure spindle is stopped unless your procedure explicitly requires otherwise.
+
+### Find One Edge (X Example)
+
+1. Move close to left edge in `JOG`.
+2. Run probe move toward edge until contact is detected.
+3. Record contact position `X_touch`.
+4. Compute true edge:
+   - If probing from left toward +X: `X_edge = X_touch + ball_radius`
+   - If probing from right toward -X: `X_edge = X_touch - ball_radius`
+
+### Find True Center (Recommended: Opposite-Side Method)
+
+1. Probe left side and record `X_left_touch`.
+2. Probe right side and record `X_right_touch`.
+3. Compute center:
+   - `X_center = (X_left_touch + X_right_touch) / 2`
+4. Repeat for Y:
+   - `Y_center = (Y_front_touch + Y_back_touch) / 2`
+
+Note: when both opposite sides are measured with the same probe, radius error mostly cancels in the average.
+
+### Apply Work Zero
+
+1. Move to computed center (`X_center`, `Y_center`).
+2. Set `G54 X` and `G54 Y` to zero at that point.
+3. Set `Z` using your normal touch plate/paper/tool setter method.
+4. Run air cut proof before cutting stock.
+
+### Common Probe Errors
+
+- Wrong ball diameter in settings -> consistent offset error.
+- Probe not electrically connected -> no trigger or false trigger.
+- Chip/coolant film on contact surfaces -> noisy or early trigger.
+- Too-fast probe feed -> overshoot and bad repeatability.
