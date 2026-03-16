@@ -5,10 +5,12 @@ This README is the full in-one-place reference for your work:
 - Section 1: Screw sizes, measuring, hole selection, Fusion/3D mount workflows
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
 - Section 3: Embedded communications (UART, SPI, I2C) and Modbus RTU over RS-485
+- Section 4: CNC operator quickstart (controls, safety prove-out, XYZ zero)
 
 ## Quick Navigation
 
 - [Section 1: Screws, 3D Modeling, Measuring, Mounts](#section-1)
+- [CNC Quickstart (Buttons + XYZ Zero)](#cnc-quickstart)
 - [Section 2: Wires, Cables, Energy Basics](#section-2)
 - [Section 3: Embedded Communications](#section-3)
 - [Safety and Scope](#safety-and-scope)
@@ -236,6 +238,7 @@ Starter expressions:
 | Pitch gauge + calipers | Thread identification | Unknown screw matching |
 | Grommet/cable gland kit | Strain relief/protection | Cable entries |
 
+<a id="cnc-quickstart"></a>
 ### 14) CNC Operation Quickstart (Buttons + XYZ Zero)
 
 Use `docs/cnc-operator-quickstart.md` for:
