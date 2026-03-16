@@ -49,6 +49,33 @@ Examples:
 4. Check run length for voltage drop (longer run may need larger wire).
 5. Confirm terminals are rated for selected wire size and temperature class.
 
+## Breaker Basics (What They Are and How They Work)
+
+What a breaker is:
+
+- A breaker is an automatic safety switch that opens when current exceeds safe limits.
+- It mainly protects conductors and wiring from overheating.
+
+How breakers trip:
+
+- Thermal element trips on sustained overload (time delay).
+- Magnetic element trips quickly on short-circuit/high-fault current.
+- This is inverse-time behavior: bigger faults trip faster.
+
+Common breaker types:
+
+- Standard thermal-magnetic.
+- `GFCI` breaker (ground-fault shock protection).
+- `AFCI` breaker (arc-fault protection).
+- Dual-function `AFCI/GFCI`.
+- Single-pole vs double-pole common-trip.
+
+Practical rules:
+
+- Match breaker rating to wire ampacity, terminals, and equipment ratings.
+- Do not upsize a breaker unless wire/equipment ratings allow it.
+- Frequent tripping means investigate overload, fault, inrush, or wiring issues.
+
 ## Common U.S. Copper Branch-Circuit Memory Points
 
 - 14 AWG -> 15A branch circuits

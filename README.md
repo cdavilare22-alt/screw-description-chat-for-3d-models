@@ -341,6 +341,33 @@ Examples:
 | Single-phase apparent power | `VA = V x I` | `120V x 5A = 600VA` |
 | Three-phase real power | `P ~= 1.732 x V x I x PF` | `1.732 x 480 x 10 x 0.9 = 7.48kW` |
 
+### 7) Breaker Basics (What They Are and How They Work)
+
+What a breaker is:
+
+- A breaker is an automatic safety switch that opens a circuit when current is too high.
+- Its primary job is protecting wiring from overheating and fire risk.
+
+How breakers trip:
+
+- Thermal trip (slower): a bimetal element heats during overload and trips after time.
+- Magnetic trip (fast): an electromagnet trips quickly on high-fault current (short circuits).
+- This creates inverse-time behavior: small overloads trip slower, big faults trip faster.
+
+Common breaker types:
+
+- Standard thermal-magnetic: overload + short-circuit protection.
+- `GFCI` breaker: adds ground-fault/shock protection.
+- `AFCI` breaker: adds arc-fault protection.
+- Dual-function `AFCI/GFCI`: combines both protections.
+- Single-pole (typically 120V) vs double-pole (typically 240V, common-trip).
+
+Practical sizing rules:
+
+- Breaker rating must coordinate with wire ampacity and terminal temperature ratings.
+- Do not increase breaker size unless conductor and equipment ratings support it.
+- Repeated tripping usually means overload, fault, inrush issue, or bad device/wiring.
+
 ---
 
 <a id="section-3"></a>
