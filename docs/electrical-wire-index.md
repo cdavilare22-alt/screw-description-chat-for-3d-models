@@ -23,6 +23,10 @@ This section is for wire gauge sizing, ampacity, volts/amps/watts basics, and qu
 - `data/serial_protocol_selection_cheatsheet.csv`
 - `data/modbus_rs485_quick_reference.csv`
 
+## PCB Components and Common Chips
+
+- `docs/pcb-components-primer.md`
+
 ## Fast Memory Points
 
 - 14 AWG -> 15A (typical branch circuit pairing)
