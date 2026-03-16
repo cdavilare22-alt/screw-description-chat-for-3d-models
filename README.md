@@ -12,6 +12,7 @@ This README is the full in-one-place reference for your work:
 - [Section 1: Screws, 3D Modeling, Measuring, Mounts](#section-1)
 - [CNC Quickstart (Buttons + XYZ Zero)](#cnc-quickstart)
 - [Section 2: Wires, Cables, Energy Basics](#section-2)
+- [PCB Components Primer](#pcb-components-primer)
 - [Section 3: Embedded Communications](#section-3)
 - [Safety and Scope](#safety-and-scope)
 
@@ -91,7 +92,34 @@ This README is the full in-one-place reference for your work:
 | M16 x 2.00 | 16.000 | 2.00 | 12.7 | 5/8-11 |
 | M20 x 2.50 | 20.000 | 2.50 | 10.2 | 3/4-10 |
 
-### 5) Tap Drill Quick Table
+### 5) Fraction to Inch/mm Quick Chart (Top 20)
+
+| Fraction | Decimal inch | mm |
+|---|---:|---:|
+| 1/64 | 0.015625 | 0.397 |
+| 1/32 | 0.031250 | 0.794 |
+| 1/16 | 0.062500 | 1.588 |
+| 3/32 | 0.093750 | 2.381 |
+| 1/8 | 0.125000 | 3.175 |
+| 5/32 | 0.156250 | 3.969 |
+| 3/16 | 0.187500 | 4.763 |
+| 7/32 | 0.218750 | 5.556 |
+| 1/4 | 0.250000 | 6.350 |
+| 9/32 | 0.281250 | 7.144 |
+| 5/16 | 0.312500 | 7.938 |
+| 11/32 | 0.343750 | 8.731 |
+| 3/8 | 0.375000 | 9.525 |
+| 7/16 | 0.437500 | 11.113 |
+| 1/2 | 0.500000 | 12.700 |
+| 9/16 | 0.562500 | 14.288 |
+| 5/8 | 0.625000 | 15.875 |
+| 3/4 | 0.750000 | 19.050 |
+| 7/8 | 0.875000 | 22.225 |
+| 1 | 1.000000 | 25.400 |
+
+Full chart: `data/inch_mm_conversion_chart.csv`
+
+### 6) Tap Drill Quick Table
 
 | Thread | Tap Drill | Notes |
 |---|---|---|
@@ -112,7 +140,7 @@ This README is the full in-one-place reference for your work:
 | M10 x 1.5 | 8.5 mm | major - pitch rule |
 | M12 x 1.75 | 10.2 mm | major - pitch rule |
 
-### 6) Clearance Hole Sizes
+### 7) Clearance Hole Sizes
 
 | Thread size | Close fit (mm) | Normal fit (mm) | Loose fit (mm) |
 |---|---:|---:|---:|
@@ -130,7 +158,7 @@ This README is the full in-one-place reference for your work:
 | M8 | 8.4 | 9.0 | 10.0 |
 | M10 | 10.5 | 11.0 | 12.0 |
 
-### 7) Caliper Through-Hole to Screw Size (Inch)
+### 8) Caliper Through-Hole to Screw Size (Inch)
 
 | Measured hole (in) | Measured hole (mm) | Likely inch screw |
 |---|---|---|
@@ -146,7 +174,7 @@ This README is the full in-one-place reference for your work:
 | 0.410 to 0.473 | 10.41 to 12.01 | 7/16 |
 | 0.473 to 0.540 | 12.01 to 13.72 | 1/2 |
 
-### 8) Caliper Through-Hole to Screw Size (Metric)
+### 9) Caliper Through-Hole to Screw Size (Metric)
 
 | Measured hole (mm) | Measured hole (in) | Likely metric screw |
 |---|---|---|
@@ -162,7 +190,7 @@ This README is the full in-one-place reference for your work:
 | 12.5 to 14.5 | 0.492 to 0.571 | M14 |
 | 14.5 to 16.5 | 0.571 to 0.650 | M16 |
 
-### 9) Nut Traps and Washers (Mount Design)
+### 10) Nut Traps and Washers (Mount Design)
 
 | Thread | Nut AF (mm) | Nut Thickness (mm) | Pocket AF (mm) | Pocket Depth (mm) |
 |---|---:|---:|---:|---:|
@@ -184,7 +212,7 @@ This README is the full in-one-place reference for your work:
 | #10 | 5.5 | 12.7 | 1.0 |
 | 1/4 | 6.9 | 18.0 | 1.6 |
 
-### 10) Bolt Length Selector (Through-Bolt)
+### 11) Bolt Length Selector (Through-Bolt)
 
 Formula:
 
@@ -195,7 +223,7 @@ Thread allowance:
 - Standard nut: `1-2 threads`
 - Nyloc: `2-3 threads`
 
-### 11) Pipe and Clamp Quick Reference (No-Paint + Painted)
+### 12) Pipe and Clamp Quick Reference (No-Paint + Painted)
 
 | NPS | Actual OD (in) | Actual OD (mm) | Typical Painted OD Range (mm) | Clamp Label |
 |---|---:|---:|---|---|
@@ -210,7 +238,7 @@ Notes:
 - NPS is nominal; OD is what you model around.
 - Measure bare/no-paint OD when possible.
 
-### 12) Fusion 360 Parameter Starters (Nut + Bolt Workflow)
+### 13) Fusion 360 Parameter Starters (Nut + Bolt Workflow)
 
 Core parameters:
 
@@ -225,7 +253,7 @@ Starter expressions:
 - `NutTrap_AF = Nut_AF + 0.30 mm`
 - `NutTrap_Depth = Nut_Thickness + 0.30 mm`
 
-### 13) Specialty Tool Purposes (Panel/PCB/Plastics)
+### 14) Specialty Tool Purposes (Panel/PCB/Plastics)
 
 | Tool | Purpose | Use It For |
 |---|---|---|
@@ -239,7 +267,7 @@ Starter expressions:
 | Grommet/cable gland kit | Strain relief/protection | Cable entries |
 
 <a id="cnc-quickstart"></a>
-### 14) CNC Operation Quickstart (Buttons + XYZ Zero)
+### 15) CNC Operation Quickstart (Buttons + XYZ Zero)
 
 Use `docs/cnc-operator-quickstart.md` for:
 
@@ -417,6 +445,17 @@ How to identify resistor need quickly:
 - If a logic input can float/behave randomly -> add pull-up or pull-down resistor.
 - If input voltage is above rating -> use divider or scaling resistor network.
 - If waveform has ringing/noise -> add damping/termination as needed.
+
+<a id="pcb-components-primer"></a>
+### 9) PCB Components Primer (Common Parts and When Used)
+
+Use `docs/pcb-components-primer.md` for:
+
+- Standard parts explained (`resistors`, `capacitors`, `diodes`, `relays`, `MOSFETs`, regulators, transceivers, drivers).
+- "When to use it" guidance and common mistakes.
+- Quick `relay vs MOSFET` decision notes.
+- Standard board building blocks (power entry, regulation, control, protection, interface, load drive).
+- Practical pre-layout checklist for ratings, decoupling, test points, and grounding.
 
 ---
 
