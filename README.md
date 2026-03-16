@@ -236,6 +236,15 @@ Starter expressions:
 | Pitch gauge + calipers | Thread identification | Unknown screw matching |
 | Grommet/cable gland kit | Strain relief/protection | Cable entries |
 
+### 14) CNC Operation Quickstart (Buttons + XYZ Zero)
+
+Use `docs/cnc-operator-quickstart.md` for:
+
+- Button purpose mapping (`Cycle Start`, `Feed Hold`, `Single Block`, `Home`, overrides).
+- Step-by-step `X/Y/Z` work-zero setup using `G54` workflow.
+- First-run safety process (simulator, air cut, reduced overrides, prove-out).
+- Machine-specific notes template so your controller details are documented once.
+
 ---
 
 <a id="section-2"></a>

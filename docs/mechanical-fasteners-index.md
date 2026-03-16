@@ -47,3 +47,7 @@ This section is for screw sizes, through-hole measuring, Fusion 360 modeling, an
 - `images/hole-selection-flow.svg`
 - `images/panel-tools-overview.svg`
 - `docs/panel-tools-field-guide.md`
+
+## CNC Setup and Operation Notes
+
+- `docs/cnc-operator-quickstart.md`
