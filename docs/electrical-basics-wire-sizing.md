@@ -29,6 +29,13 @@ This guide helps with day-to-day decisions around wire gauge, amp load, and powe
 - `V = W / A`
 - `Vdrop = I x R`
 
+For `Vdrop = I x R`:
+
+- `I` is current in amps flowing through the conductor.
+- `R` is total conductor-path resistance in ohms.
+- On a normal 2-wire path, compute `R` using round-trip length:
+  `R = (wire ohms per foot) x (2 x one-way feet)`.
+
 Examples:
 
 - 1200W load on 120V: `A = 1200 / 120 = 10A`

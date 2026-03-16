@@ -259,6 +259,13 @@ Core formulas:
 - `V = W / A`
 - `Vdrop = I x R`
 
+For `Vdrop = I x R`:
+
+- `I` = current through the wire (amps).
+- `R` = total wire-path resistance (ohms).
+- For a typical DC or single-phase 2-wire run, use round-trip resistance:
+  `R = (ohms per foot of one conductor) x (2 x one-way length in feet)`.
+
 Examples:
 
 - `1200W @ 120V = 10A`
