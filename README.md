@@ -4,6 +4,7 @@ This README is the full in-one-place reference for your work:
 
 - Section 1: Screw sizes, measuring, hole selection, Fusion/3D mount workflows
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
+- Section 3: Embedded communications (UART, SPI, I2C) and Modbus RTU over RS-485
 
 ---
 
@@ -323,6 +324,54 @@ Examples:
 | Heating power | `P = I^2 x R` | `10A^2 x 0.1ohm = 10W` |
 | Single-phase apparent power | `VA = V x I` | `120V x 5A = 600VA` |
 | Three-phase real power | `P ~= 1.732 x V x I x PF` | `1.732 x 480 x 10 x 0.9 = 7.48kW` |
+
+---
+
+## Section 3: Embedded Communications (UART, SPI, I2C, Modbus RTU/RS-485)
+
+### 1) Quick Descriptions
+
+- `UART`: asynchronous point-to-point serial link using TX/RX lines. Simple and common for MCU-to-device and debug connections.
+- `SPI`: synchronous bus using SCLK, MOSI, MISO, and chip-select lines. Fast and low-latency for short board-level links.
+- `I2C`: synchronous shared bus using SDA/SCL plus pull-ups. Great for many low-speed devices on short PCB/cable runs.
+- `Modbus RTU over RS-485`: industrial multi-drop network using differential A/B signaling for noise immunity and longer distances.
+
+### 2) Protocol Selection Cheat Sheet
+
+| Protocol | Best When | Typical Speed | Distance | Device Count | Common Applications |
+|---|---|---|---|---|---|
+| UART (TTL/CMOS) | You need simplest point-to-point serial | 9.6 kbps to 1 Mbps | Short, on-board or short cable | 2 endpoints | Console/debug, GPS modules, Bluetooth modules |
+| SPI | You need high throughput and deterministic timing | 1 MHz to 50+ MHz (device-dependent) | Very short, same PCB/nearby board | 1 master + multiple chip selects | ADC/DAC, flash memory, displays, high-speed sensors |
+| I2C | You need many peripherals with minimal wires | 100 kHz, 400 kHz, 1 MHz+ (mode-dependent) | Short; capacitance-limited | Multi-drop by address | Temp/IMU sensors, RTC, IO expanders, EEPROM |
+| Modbus RTU over RS-485 | You need robust industrial multi-node communication | 9.6 kbps to 115.2 kbps common | Up to hundreds of meters+ with proper design | Multi-drop network | PLC/SCADA, VFDs, smart meters, remote IO |
+
+### 3) "When Should I Use It?" Quick Rules
+
+- Use `UART` for one-to-one links and fast bring-up/debug.
+- Use `SPI` when update rate or throughput matters and wiring is short.
+- Use `I2C` when pin count is limited and devices support unique addresses.
+- Use `Modbus RTU over RS-485` for noisy environments, longer runs, and multi-drop industrial devices.
+
+### 4) Modbus RTU + RS-485 Integration Notes
+
+| Topic | Practical Rule |
+|---|---|
+| Physical layer | Use an RS-485 transceiver (`MAX485`, `SN65HVD`, `ADM` families) between MCU UART and A/B bus. |
+| Topology | Daisy-chain trunk; avoid star wiring where possible. |
+| Termination | 120 ohm at both physical ends of the trunk only. |
+| Biasing | Add fail-safe bias resistors at one location on the bus if transceivers do not provide it. |
+| Direction control | For half-duplex transceivers, tie `DE/RE` to a GPIO and switch TX/RX direction in firmware. |
+| Ground/reference | Keep a reference ground between nodes (or isolated transceivers where needed). |
+| Protocol limits | Modbus RTU is master/client initiated; each slave/server needs a unique node address (1..247). |
+| Framing | Keep baud/parity/stop-bits identical across all devices. |
+| Reliability | Add CRC checks (standard Modbus RTU), timeout/retry handling, and exception-code logging. |
+
+### 5) Typical Applications by Protocol
+
+- `UART`: CLI/debug ports, GNSS receivers, point-to-point sensor modules.
+- `SPI`: fast sampling front-ends, external flash for logging, display controllers.
+- `I2C`: board-level sensors and expanders where moderate speed is acceptable.
+- `Modbus RTU/RS-485`: distributed field sensors, motor drives, remote panel I/O, energy metering.
 
 ---
 

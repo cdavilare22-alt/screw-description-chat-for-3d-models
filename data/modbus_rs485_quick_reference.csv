@@ -1,0 +1,9 @@
+topic,rule_of_thumb,why_it_matters
+Transceiver,Use RS-485 transceiver between MCU UART and A/B lines,UART logic levels are not directly RS-485 differential levels
+Topology,Use daisy-chain trunk and avoid star wiring,Improves signal integrity and reduces reflections
+Termination,Use 120 ohm at each physical end only,Controls reflections on long lines
+Biasing,Use fail-safe bias at one location if required,Keeps bus in known idle state
+Direction_Control,For half-duplex set DE/RE with GPIO,Prevents bus contention during transmit/receive
+Addressing,Assign unique slave addresses 1-247,Avoids response collisions
+Serial_Settings,Match baud parity and stop bits on all nodes,Prevents framing and decode errors
+Reliability,Use CRC timeout retries and exception handling,Improves communication robustness in field conditions

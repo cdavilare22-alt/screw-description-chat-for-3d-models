@@ -17,6 +17,12 @@ This section is for wire gauge sizing, ampacity, volts/amps/watts basics, and qu
 - `data/electrical_power_formula_cheatsheet.csv`
 - `data/common_voltage_levels_us_quick_reference.csv`
 
+## Embedded Communications (UART/SPI/I2C/Modbus RS-485)
+
+- `docs/communications-uart-spi-i2c-modbus-rs485.md`
+- `data/serial_protocol_selection_cheatsheet.csv`
+- `data/modbus_rs485_quick_reference.csv`
+
 ## Fast Memory Points
 
 - 14 AWG -> 15A (typical branch circuit pairing)

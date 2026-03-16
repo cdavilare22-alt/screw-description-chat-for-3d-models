@@ -1,0 +1,5 @@
+protocol,best_when,typical_speed,distance,topology,common_applications
+UART,Simple point-to-point serial and debug links,9.6 kbps to 1 Mbps common,Short on-board or short cable,Point-to-point,CLI debug GPS Bluetooth serial modules
+SPI,High throughput and deterministic timing needed,1 MHz to 50+ MHz device dependent,Very short same board,One master many chip-selects,ADC DAC external flash displays
+I2C,Many peripherals needed with minimal pins,100 kHz 400 kHz 1 MHz+ mode dependent,Short capacitance-limited bus,Multi-drop addressed bus,Sensors RTC IO expanders EEPROM
+Modbus RTU over RS-485,Long noisy multi-node industrial communication,9.6 kbps to 115.2 kbps common,Hundreds of meters with proper wiring,Multi-drop daisy chain,PLC SCADA drives power meters remote IO
