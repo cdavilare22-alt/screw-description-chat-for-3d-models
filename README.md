@@ -1,4 +1,4 @@
-# Shop Reference: Mechanical + Electrical (All-In-One)
+# Shop Reference: Mechanical + Electrical + Communications (All-In-One)
 
 This README is the full in-one-place reference for your work:
 
@@ -367,6 +367,30 @@ Practical sizing rules:
 - Breaker rating must coordinate with wire ampacity and terminal temperature ratings.
 - Do not increase breaker size unless conductor and equipment ratings support it.
 - Repeated tripping usually means overload, fault, inrush issue, or bad device/wiring.
+
+### 8) Resistor Basics (Why They Are Used and When Needed)
+
+What a resistor is:
+
+- A resistor is a component that limits current and creates controlled voltage drops.
+- Resistance is measured in ohms (`ohm`), which describes how strongly current is opposed.
+
+When resistors are needed:
+
+- Current limiting: LEDs, transistor/gate drive paths, protecting IO pins.
+- Pull-up/pull-down biasing: preventing floating inputs on buttons and logic pins.
+- Voltage dividing: scaling higher voltage down to ADC or logic-safe input ranges.
+- Feedback/setpoint control: op-amp gain networks and adjustable regulator outputs.
+- Timing/filtering: RC debounce, startup delay, and noise filtering networks.
+- Signal integrity: series damping or terminations on fast digital/communication lines.
+- Discharge/bleeder use: safely discharging capacitors after power-off.
+
+How to identify resistor need quickly:
+
+- If direct connection would exceed rated current -> add a resistor.
+- If a logic input can float/behave randomly -> add pull-up or pull-down resistor.
+- If input voltage is above rating -> use divider or scaling resistor network.
+- If waveform has ringing/noise -> add damping/termination as needed.
 
 ---
 

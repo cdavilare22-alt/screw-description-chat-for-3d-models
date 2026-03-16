@@ -76,6 +76,30 @@ Practical rules:
 - Do not upsize a breaker unless wire/equipment ratings allow it.
 - Frequent tripping means investigate overload, fault, inrush, or wiring issues.
 
+## Resistor Basics (Why They Are Used and When Needed)
+
+What a resistor is:
+
+- A resistor limits current and helps set voltages in a controlled way.
+- Resistance is measured in ohms (`ohm`).
+
+Common reasons to use resistors:
+
+- Current limiting for LEDs and sensitive inputs/outputs.
+- Pull-up/pull-down on digital inputs to prevent floating logic states.
+- Voltage divider networks for ADC scaling and logic-level adaptation.
+- Feedback/gain setting in analog circuits and regulator setpoints.
+- RC timing or filtering for debounce and noise reduction.
+- Series damping/termination for high-speed digital signal quality.
+- Bleeder/discharge paths for capacitors.
+
+Quick checks:
+
+- If direct connection causes too much current, a resistor is required.
+- If an input can float randomly, use pull-up or pull-down resistor.
+- If measured signal exceeds input rating, use divider/scaling resistors.
+- If signal has ringing/noise, add damping/termination resistance.
+
 ## Common U.S. Copper Branch-Circuit Memory Points
 
 - 14 AWG -> 15A branch circuits
