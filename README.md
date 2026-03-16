@@ -6,8 +6,16 @@ This README is the full in-one-place reference for your work:
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
 - Section 3: Embedded communications (UART, SPI, I2C) and Modbus RTU over RS-485
 
+## Quick Navigation
+
+- [Section 1: Screws, 3D Modeling, Measuring, Mounts](#section-1)
+- [Section 2: Wires, Cables, Energy Basics](#section-2)
+- [Section 3: Embedded Communications](#section-3)
+- [Safety and Scope](#safety-and-scope)
+
 ---
 
+<a id="section-1"></a>
 ## Section 1: Screws, 3D Modeling, Measuring, Mounts
 
 ### Visuals
@@ -230,6 +238,7 @@ Starter expressions:
 
 ---
 
+<a id="section-2"></a>
 ## Section 2: Wires, Cables, Energy Basics (Amps/Volts/Watts)
 
 ### Visual
@@ -327,6 +336,7 @@ Examples:
 
 ---
 
+<a id="section-3"></a>
 ## Section 3: Embedded Communications (UART, SPI, I2C, Modbus RTU/RS-485)
 
 ### 1) Quick Descriptions
