@@ -27,6 +27,9 @@ This guide helps with day-to-day decisions around wire gauge, amp load, and powe
 - `W = V x A`
 - `A = W / V`
 - `V = W / A`
+- `V = I x R`
+- `I = V / R`
+- `R = V / I`
 - `Vdrop = I x R`
 
 For `Vdrop = I x R`:

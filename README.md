@@ -257,6 +257,9 @@ Core formulas:
 - `W = V x A`
 - `A = W / V`
 - `V = W / A`
+- `V = I x R`
+- `I = V / R`
+- `R = V / I`
 - `Vdrop = I x R`
 
 For `Vdrop = I x R`:
@@ -336,7 +339,9 @@ Examples:
 | DC / single-phase resistive | `P = V x I` | `120V x 2A = 240W` |
 | Find current | `I = P / V` | `1500W / 120V = 12.5A` |
 | Find voltage | `V = P / I` | `240W / 2A = 120V` |
-| Ohm's law | `V = I x R` | `2A x 5ohm = 10V` |
+| Ohm's law (voltage form) | `V = I x R` | `2A x 5ohm = 10V` |
+| Ohm's law (current form) | `I = V / R` | `10V / 5ohm = 2A` |
+| Ohm's law (resistance form) | `R = V / I` | `10V / 2A = 5ohm` |
 | Heating power | `P = I^2 x R` | `10A^2 x 0.1ohm = 10W` |
 | Single-phase apparent power | `VA = V x I` | `120V x 5A = 600VA` |
 | Three-phase real power | `P ~= 1.732 x V x I x PF` | `1.732 x 480 x 10 x 0.9 = 7.48kW` |
