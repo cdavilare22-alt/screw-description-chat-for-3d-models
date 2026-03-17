@@ -244,6 +244,10 @@ Notes:
 
 ### 13) Fusion 360 Parameter Starters (Nut + Bolt Workflow)
 
+For faster day-to-day modeling and edits, use:
+
+- `docs/fusion-360-speed-tricks.md`
+
 Core parameters:
 
 - `Fastener_Dia`, `Clearance_Normal`, `Washer_OD`, `Washer_Thickness`
@@ -520,6 +524,10 @@ Use `docs/pcb-components-primer.md` for:
 - Quick `relay vs MOSFET` decision notes.
 - Standard board building blocks (power entry, regulation, control, protection, interface, load drive).
 - Practical pre-layout checklist for ratings, decoupling, test points, and grounding.
+
+For full board workflow in EasyEDA (schematic -> layout -> DRC -> manufacturing outputs), use:
+
+- `docs/easyeda-pcb-design-guide.md`
 
 ---
 

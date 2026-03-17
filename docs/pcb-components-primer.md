@@ -2,6 +2,10 @@
 
 This guide is for learning common parts used in real boards and projects.
 
+For a full EasyEDA design workflow (requirements -> schematic -> layout -> DRC -> manufacturing package), see:
+
+- `docs/easyeda-pcb-design-guide.md`
+
 ## Core Idea
 
 - Most PCB designs are built from repeatable "blocks":

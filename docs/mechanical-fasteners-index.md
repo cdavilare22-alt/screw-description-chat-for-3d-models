@@ -30,6 +30,7 @@ This section is for screw sizes, through-hole measuring, Fusion 360 modeling, an
 ## 3D Model + Mount Workflow (Nuts/Bolts)
 
 - `docs/fusion-360-nut-bolt-params.md`
+- `docs/fusion-360-speed-tricks.md`
 - `docs/nut-and-bolt-mount-recipes.md`
 - `docs/bolt-length-selector.md`
 - `data/nut_trap_sizes_hex.csv`

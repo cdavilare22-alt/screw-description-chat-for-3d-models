@@ -26,6 +26,7 @@ This section covers wire sizing and power basics, plus communications and PCB re
 ## PCB Components and Common Chips
 
 - `docs/pcb-components-primer.md`
+- `docs/easyeda-pcb-design-guide.md`
 
 ## Fast Memory Points
 
