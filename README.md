@@ -9,14 +9,36 @@ This README is the full in-one-place reference for your work:
 
 ## Quick Navigation
 
-- [Section 1: Screws, 3D Modeling, Measuring, Mounts](#section-1)
-- [CNC Quickstart (Buttons + XYZ Zero)](#cnc-quickstart)
-- [Section 2: Wires, Cables, Energy Basics](#section-2)
-- [PCB Components Primer](#pcb-components-primer)
-- [Section 3: Embedded Communications](#section-3)
-- [Section 4: Pneumatic Valves Basics](#section-4)
-- [Pneumatic Valves Standalone Guide](docs/pneumatic-valves-basics.md)
+- [Section 1: Mechanical Index](docs/mechanical-fasteners-index.md)
+- [CNC Quickstart (Buttons + XYZ Zero)](docs/cnc-operator-quickstart.md)
+- [Section 2: Electrical/Comms/PCB Index](docs/electrical-wire-index.md)
+- [PCB Components Primer](docs/pcb-components-primer.md)
+- [EasyEDA PCB Design Guide](docs/easyeda-pcb-design-guide.md)
+- [Section 3: Embedded Communications](docs/communications-uart-spi-i2c-modbus-rs485.md)
+- [Section 4: Pneumatic Valves Basics](docs/pneumatic-valves-basics.md)
 - [Safety and Scope](#safety-and-scope)
+
+## All Doc Quick Links
+
+- [Screw Guide](SCREW_GUIDE.md)
+- [Intern Quickstart](docs/intern-quickstart.md)
+- [Mechanical Index](docs/mechanical-fasteners-index.md)
+- [Through-Hole Quick Chart (Inch)](docs/through-hole-caliper-quick-chart.md)
+- [Through-Hole Quick Chart (Metric)](docs/through-hole-caliper-quick-chart-metric.md)
+- [Full Size Reference](docs/full-size-reference.md)
+- [Fusion 360 Nut/Bolt Parameters](docs/fusion-360-nut-bolt-params.md)
+- [Fusion 360 Speed Tricks](docs/fusion-360-speed-tricks.md)
+- [Nut and Bolt Mount Recipes](docs/nut-and-bolt-mount-recipes.md)
+- [Bolt Length Selector](docs/bolt-length-selector.md)
+- [Pipe Size Quick Chart](docs/pipe-size-quick-chart.md)
+- [Panel Tools Field Guide](docs/panel-tools-field-guide.md)
+- [CNC Operator Quickstart](docs/cnc-operator-quickstart.md)
+- [Electrical, Communications, and PCB Index](docs/electrical-wire-index.md)
+- [Electrical Basics and Wire Sizing](docs/electrical-basics-wire-sizing.md)
+- [PCB Components Primer](docs/pcb-components-primer.md)
+- [EasyEDA PCB Design Guide](docs/easyeda-pcb-design-guide.md)
+- [Embedded Communications Quick Guide](docs/communications-uart-spi-i2c-modbus-rs485.md)
+- [Pneumatic Valves Basics](docs/pneumatic-valves-basics.md)
 
 ---
 
