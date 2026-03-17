@@ -336,6 +336,13 @@ Practical rule:
   - Constant power load (many electronic supplies/motor drives): lower `V` can increase `A`.
   - Constant resistance load (heater/incandescent element): lower `V` reduces `A`.
 
+Fixed-power board example:
+
+- A DC-DC regulator delivering about `24W` to a load will draw different input current as input voltage changes.
+- At `24V` input, input current is about `1A` (`24W / 24V`).
+- At `12V` input, input current is about `2A` (`24W / 12V`).
+- Real designs draw a bit more due to efficiency losses, so always include margin in connector/wire/fuse sizing.
+
 ### 2) Wire Gauge Memory Points
 
 - `14 AWG -> 15A` typical branch-circuit pairing
