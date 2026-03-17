@@ -614,6 +614,28 @@ What they operate with:
 | `5/2` | 5 ports, 2 positions | Double-acting cylinder extend/retract |
 | `5/3` | 5 ports, 3 positions (center state) | Double-acting cylinder with defined center behavior |
 
+Port and position label logic (what the markings mean):
+
+- `Ports` are physical connection points where air lines connect.
+- `Positions` are the valve's internal switching states.
+- Example: `5/2` means 5 ports and 2 switching positions.
+
+Common letter markings (vendor conventions can vary):
+
+- `P` = pressure supply (air in)
+- `A` = work port A (to actuator side A)
+- `B` = work port B (to actuator side B)
+- `R` / `EA` = exhaust from A side
+- `S` / `EB` = exhaust from B side
+
+Common ISO number mapping:
+
+- `1` = `P` (supply)
+- `2` = `A`
+- `4` = `B`
+- `3` = exhaust for A side
+- `5` = exhaust for B side
+
 Actuation styles you will see:
 
 - Solenoid-operated (electrical coil moves spool/poppet).
