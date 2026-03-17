@@ -5,8 +5,7 @@ This README is the full in-one-place reference for your work:
 - Section 1: Screw sizes, measuring, hole selection, Fusion/3D mount workflows
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
 - Section 3: Embedded communications (UART, SPI, I2C) and Modbus RTU over RS-485
-- Section 4: CNC operator quickstart (controls, safety prove-out, XYZ zero)
-- Section 5: Pneumatic valves (what they are, how they operate, when to use them)
+- Section 4: Pneumatic valves (what they are, how they operate, when to use them)
 
 ## Quick Navigation
 
@@ -16,6 +15,7 @@ This README is the full in-one-place reference for your work:
 - [PCB Components Primer](#pcb-components-primer)
 - [Section 3: Embedded Communications](#section-3)
 - [Section 4: Pneumatic Valves Basics](#section-4)
+- [Pneumatic Valves Standalone Guide](docs/pneumatic-valves-basics.md)
 - [Safety and Scope](#safety-and-scope)
 
 ---
@@ -582,6 +582,8 @@ Common failure logic (fast debug):
 
 <a id="section-4"></a>
 ## Section 4: Pneumatic Valves Basics (What They Are, What They Run On, When Useful)
+
+Standalone guide: `docs/pneumatic-valves-basics.md`
 
 ### 1) What a Pneumatic Valve Is
 

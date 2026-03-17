@@ -1,6 +1,6 @@
-# Electrical and Wire Section Index
+# Electrical, Communications, and PCB Index
 
-This section is for wire gauge sizing, ampacity, volts/amps/watts basics, and quick power math.
+This section covers wire sizing and power basics, plus communications and PCB references used in controls work.
 
 ## Start Here
 
