@@ -6,6 +6,7 @@ This README is the full in-one-place reference for your work:
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
 - Section 3: Embedded communications (UART, SPI, I2C) and Modbus RTU over RS-485
 - Section 4: CNC operator quickstart (controls, safety prove-out, XYZ zero)
+- Section 5: Pneumatic valves (what they are, how they operate, when to use them)
 
 ## Quick Navigation
 
@@ -14,6 +15,7 @@ This README is the full in-one-place reference for your work:
 - [Section 2: Wires, Cables, Energy Basics](#section-2)
 - [PCB Components Primer](#pcb-components-primer)
 - [Section 3: Embedded Communications](#section-3)
+- [Section 4: Pneumatic Valves Basics](#section-4)
 - [Safety and Scope](#safety-and-scope)
 
 ---
@@ -317,6 +319,23 @@ Examples:
 - `1200W @ 240V = 5A`
 - Same power at higher voltage -> lower current.
 
+### Voltage vs Amperage Logic (Common Confusion)
+
+Short answer: lowering voltage does **not** always raise amperage.
+
+- If load power is fixed, lower voltage means higher current:
+  `I = P / V`
+  Example: for `1200W`, `120V -> 10A` and `240V -> 5A`.
+- If load resistance is fixed (simple resistive load), lower voltage means lower current:
+  `I = V / R`
+  Example: `12 ohm` heater at `120V -> 10A`; at `60V -> 5A`.
+
+Practical rule:
+
+- Ask what stays constant first:
+  - Constant power load (many electronic supplies/motor drives): lower `V` can increase `A`.
+  - Constant resistance load (heater/incandescent element): lower `V` reduces `A`.
+
 ### 2) Wire Gauge Memory Points
 
 - `14 AWG -> 15A` typical branch-circuit pairing
@@ -424,7 +443,43 @@ Practical sizing rules:
 - Do not increase breaker size unless conductor and equipment ratings support it.
 - Repeated tripping usually means overload, fault, inrush issue, or bad device/wiring.
 
-### 8) Resistor Basics (Why They Are Used and When Needed)
+### 8) SSR Basics (Solid-State Relay: What It Is and When Useful)
+
+What an SSR is:
+
+- An `SSR` (solid-state relay) is an electronic switch that turns a load on/off using semiconductors instead of mechanical contacts.
+- Input side is low-power control (often `3-32V DC`), output side switches a separate load circuit (`AC` or `DC` model dependent).
+- SSRs provide electrical isolation between control and load sides in many designs.
+
+When SSRs are useful:
+
+- Fast, high-cycle switching where mechanical relay contact wear is a concern.
+- Quiet operation (no clicking contacts).
+- PLC/MCU control of heaters or other repetitive on/off loads.
+
+Watch-outs:
+
+- SSRs have on-state voltage drop, so they generate heat and usually need thermal sizing/heatsinking.
+- AC and DC SSR types are not interchangeable; match output type to load.
+- Many AC SSRs have leakage current when "off"; some loads may still show ghost voltage.
+- For inductive loads, validate surge rating and add suppression where needed.
+
+### 9) BSK-62957 and BSK-62885 (Part-ID Guidance)
+
+- `BSK-62957` and `BSK-62885` are best treated as internal catalog/BOM identifiers unless tied to a verified manufacturer datasheet.
+- In practice, these IDs should map to:
+  - Manufacturer name
+  - Manufacturer part number
+  - Device type (`SSR`, breaker, valve, terminal block, etc.)
+  - Electrical ratings (voltage/current) and mounting form factor
+
+How to use these IDs in design/replacement work:
+
+- Do not substitute by numeric code alone.
+- Always confirm the exact mapped part and ratings before install or replacement.
+- Record the mapping in your BOM so future troubleshooting is unambiguous.
+
+### 10) Resistor Basics (Why They Are Used and When Needed)
 
 What a resistor is:
 
@@ -449,7 +504,7 @@ How to identify resistor need quickly:
 - If waveform has ringing/noise -> add damping/termination as needed.
 
 <a id="pcb-components-primer"></a>
-### 9) PCB Components Primer (Common Parts and When Used)
+### 11) PCB Components Primer (Common Parts and When Used)
 
 Use `docs/pcb-components-primer.md` for:
 
@@ -507,6 +562,87 @@ Use `docs/pcb-components-primer.md` for:
 - `SPI`: fast sampling front-ends, external flash for logging, display controllers.
 - `I2C`: board-level sensors and expanders where moderate speed is acceptable.
 - `Modbus RTU/RS-485`: distributed field sensors, motor drives, remote panel I/O, energy metering.
+
+---
+
+<a id="section-4"></a>
+## Section 4: Pneumatic Valves Basics (What They Are, What They Run On, When Useful)
+
+### 1) What a Pneumatic Valve Is
+
+- A pneumatic valve controls compressed gas flow in a pneumatic system.
+- In most shop and industrial systems, the working medium is compressed air.
+- Valves start/stop flow, direct flow paths, regulate pressure, or control flow rate.
+
+What they operate with:
+
+- Primary medium: compressed air (common plant air often around `80-120 psi` supply).
+- Also used with inert gases (`nitrogen`) in some applications where dry/clean gas is needed.
+
+### 2) Why Pneumatic Valves Are Useful
+
+- Fast, repeatable actuator motion for cylinders and grippers.
+- Simpler and often lower-cost control for on/off motion than hydraulics.
+- Clean operation where oil leaks are undesirable (food/light assembly contexts).
+- Good fit for high-cycle automation with straightforward maintenance.
+
+### 3) Core Valve Functions
+
+| Function | What It Does | Typical Use |
+|---|---|---|
+| Directional control | Routes air to extend/retract actuators | Cylinder and gripper motion control |
+| Pressure regulation | Holds downstream pressure at setpoint | Protect tools/actuators from over-pressure |
+| Flow control | Restricts flow to set actuator speed | Smooth extension/retraction timing |
+| Check/non-return | Allows one-way flow only | Hold pressure, prevent backflow |
+| Quick exhaust | Dumps actuator air locally for faster motion | Faster cylinder response |
+| Soft start/dump | Gradual pressurization and safe venting | Safer startup/shutdown and maintenance |
+
+### 4) Common Directional Valve Types (Port/Ways and Positions)
+
+| Valve Type | Meaning | Typical Application |
+|---|---|---|
+| `2/2` | 2 ports, 2 positions (open/closed) | Basic on/off air supply |
+| `3/2` | 3 ports, 2 positions | Single-acting cylinder control |
+| `5/2` | 5 ports, 2 positions | Double-acting cylinder extend/retract |
+| `5/3` | 5 ports, 3 positions (center state) | Double-acting cylinder with defined center behavior |
+
+Actuation styles you will see:
+
+- Solenoid-operated (electrical coil moves spool/poppet).
+- Pilot-operated (air pilot shifts main stage).
+- Manual/mechanical lever or roller.
+
+### 5) When to Choose Pneumatic Valves
+
+Use pneumatic valves when:
+
+- You already have compressed air available.
+- Required motion is linear/clamping/pick-place and force needs are moderate.
+- High cycle rate and quick response matter.
+- Small leaks/noise are acceptable for the process.
+
+Choose another approach when:
+
+- You need very high force in compact size (`hydraulics` often fit better).
+- You need tight position control without additional sensing/control hardware (`electric servo` often simpler).
+- Compressed air is unavailable or too costly to provide.
+
+### 6) Practical Selection Checklist
+
+- Required valve type (`3/2`, `5/2`, `5/3`) based on actuator and fail-state.
+- Port size and flow capacity (`Cv`/`Kv`) to meet speed targets.
+- Coil voltage/control interface (`24V DC` is common in panels).
+- Pressure range and media compatibility.
+- Normal state (`normally closed`, `normally open`, spring return, detented).
+- Environmental rating (`IP` level, temperature, contamination tolerance).
+- Maintenance and safety needs (manual override, lockout/dump strategy).
+
+### 7) Fast Integration Notes
+
+- Use an `FRL` setup (filter-regulator-lubricator, or filter-regulator where lubrication is not needed) to stabilize air quality and pressure.
+- Put flow controls near cylinder ports for better speed tuning.
+- Add silencers on exhaust ports to reduce noise.
+- Define the de-energized safe state clearly in schematics and control logic.
 
 ---
 
