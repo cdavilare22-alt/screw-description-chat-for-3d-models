@@ -28,6 +28,14 @@ This guide gives quick protocol-selection rules for embedded systems and control
 6. Assign unique slave/server addresses (typically `1..247`).
 7. Use CRC, timeout, retry, and exception-code logging for robust behavior.
 
+## Common Failure Logic (Fast Debug)
+
+- If the whole bus is unstable, confirm termination is only at the two physical ends of the trunk.
+- If only one node fails, verify its address is unique and not duplicated elsewhere.
+- If you get CRC errors/timeouts with visible traffic, check baud/parity/stop-bit framing on every node.
+- If transmit seems fine but receive is dead (or reversed), check firmware timing for `DE`/`RE` direction control.
+- If someone expects spontaneous messages from field nodes, clarify that Modbus RTU server/slave devices reply when polled; they do not normally initiate frames.
+
 ## Quick Decision Flow
 
 1. One device and shortest implementation time: pick `UART`.

@@ -556,6 +556,14 @@ Use `docs/pcb-components-primer.md` for:
 | Framing | Keep baud/parity/stop-bits identical across all devices. |
 | Reliability | Add CRC checks (standard Modbus RTU), timeout/retry handling, and exception-code logging. |
 
+Common failure logic (fast debug):
+
+- If many nodes are flaky, check physical ends first: only the two end nodes should have `120 ohm` termination.
+- If one node never replies, verify its unique address and that no other node shares the same address.
+- If frames are seen but rejected (CRC/exceptions/timeouts), verify all serial framing settings exactly match.
+- If TX looks active but no valid bus traffic appears, check `DE/RE` timing and direction-switch firmware logic.
+- If polls work but unsolicited updates are expected, remember Modbus RTU server devices respond to requests; they do not initiate traffic on their own.
+
 ### 5) Typical Applications by Protocol
 
 - `UART`: CLI/debug ports, GNSS receivers, point-to-point sensor modules.
