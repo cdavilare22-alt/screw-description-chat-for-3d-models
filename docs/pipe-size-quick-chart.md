@@ -8,6 +8,27 @@ This is the simple version for mount design and online clamp ordering.
 - Clamps are usually sold by **nominal pipe size label** (`1/2 in pipe clamp`, `1 in pipe clamp`, etc.).
 - Your calipers read **actual OD**, and paint/coating makes OD read larger.
 
+## What Pipe Mounts Are (And Why Used)
+
+- A pipe mount is a bracket, clamp, strap, or saddle that secures a pipe/tube to a structure.
+- Pipe mounts are used to:
+  - Hold position and prevent movement/vibration.
+  - Keep alignment/spacing for runs and connected components.
+  - Transfer load safely into a frame, wall, or panel.
+  - Reduce wear from rubbing/chafing when properly cushioned.
+
+Common examples:
+
+- U-bolt or saddle clamp on a frame rail.
+- Cushioned P-clamp for instrument/utility lines.
+- Split-ring or two-piece clamp for serviceable installations.
+
+When to use pipe mounts:
+
+- Any time a pipe/tube run needs repeatable support points.
+- Near fittings/valves where unsupported weight can stress connections.
+- In mobile/vibration environments where movement must be controlled.
+
 ## Fast Memory Anchors (Bare Pipe OD)
 
 - `1/2 in pipe -> 0.840 in OD (21.34 mm)`

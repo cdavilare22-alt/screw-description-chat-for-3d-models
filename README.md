@@ -251,6 +251,12 @@ Thread allowance:
 
 ### 12) Pipe and Clamp Quick Reference (No-Paint + Painted)
 
+What pipe mounts are:
+
+- Pipe mounts are brackets/clamps used to secure pipes or tubes to a structure.
+- They are used to control movement, reduce vibration/chafing, and prevent load stress on fittings.
+- Common forms include U-bolts, cushioned P-clamps, and split-ring/two-piece clamps.
+
 | NPS | Actual OD (in) | Actual OD (mm) | Typical Painted OD Range (mm) | Clamp Label |
 |---|---:|---:|---|---|
 | 1/2 | 0.840 | 21.34 | 21.5-22.0 | 1/2 in pipe clamp |
