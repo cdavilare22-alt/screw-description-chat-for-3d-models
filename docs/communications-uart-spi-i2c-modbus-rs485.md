@@ -9,6 +9,36 @@ This guide gives quick protocol-selection rules for embedded systems and control
 - `I2C`: two-wire addressed bus for multiple lower-speed peripherals.
 - `Modbus RTU over RS-485`: robust industrial serial network for multi-node field devices.
 
+## Practical Logic Example: SC16IS752
+
+The `SC16IS752` is a useful example of how these methods fit together.
+
+- The chip provides `2` external UART channels: `UART A` and `UART B`.
+- The MCU does not talk to those UART channels directly.
+- The MCU talks to the `SC16IS752` over either `SPI` or `I2C`.
+
+That means the structure is:
+
+- `MCU -> SPI -> SC16IS752 -> UART A -> external device 1`
+- `MCU -> SPI -> SC16IS752 -> UART B -> external device 2`
+
+Or with I2C instead:
+
+- `MCU -> I2C -> SC16IS752 -> UART A -> external device 1`
+- `MCU -> I2C -> SC16IS752 -> UART B -> external device 2`
+
+Practical interpretation:
+
+- `UART` is the actual external serial link used by the end devices.
+- `SPI` is the internal high-speed link from the MCU to the UART-expander chip.
+- `I2C` is an alternative internal link from the MCU to that same chip, using fewer pins but lower bandwidth.
+
+Rule of thumb:
+
+- Use `SPI` when speed matters and you can spare the pins.
+- Use `I2C` when pin count matters more than speed.
+- Use `UART` when you are talking directly to a serial device, or when a bridge chip is giving you extra UART ports.
+
 ## Selection Cheat Sheet
 
 | Protocol | Use It When | Avoid It When | Typical Applications |
