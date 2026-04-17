@@ -22,6 +22,38 @@ This guide helps with day-to-day decisions around wire gauge, amp load, and powe
 - For the same power, higher voltage means lower current.
 - Lower current usually allows smaller wire or lower voltage drop.
 
+## Temperature, Resistance, Current, and Cold Starts
+
+Temperature changes resistance, but the direction depends on the material or device.
+
+For copper wire:
+
+- colder copper has lower resistance
+- hotter copper has higher resistance
+- lower wire resistance means less voltage drop for the same current
+
+For a simple fixed-resistance heater or incandescent lamp:
+
+- lower resistance at a fixed voltage allows more current
+- startup current can be higher while the element is still cold
+- as the element heats up, resistance usually rises and current settles
+
+For an NTC thermistor:
+
+- colder means higher resistance
+- higher resistance at a fixed voltage means lower current through that thermistor path
+
+For motors, pumps, and fans:
+
+- cold oil, grease, bearings, or fluid can increase mechanical load
+- higher mechanical load can make motor current rise
+- this is different from wire resistance; it is the motor working harder
+
+Practical rule:
+
+- If amps rise in cold conditions, check whether the cause is electrical resistance, mechanical load,
+  low voltage, or a constant-power supply trying to maintain output power.
+
 ## Fast Math You Will Use
 
 - `W = V x A`
@@ -132,3 +164,8 @@ Quick checks:
 - `data/awg_common_sizes_reference.csv`
 - `data/electrical_power_formula_cheatsheet.csv`
 - `data/common_voltage_levels_us_quick_reference.csv`
+
+## Related Guides
+
+- `docs/temperature-sensors-rtd-pt100.md`
+- `docs/heat-trace-basics.md`

@@ -17,6 +17,14 @@ This section covers wire sizing and power basics, plus communications and PCB re
 - `data/electrical_power_formula_cheatsheet.csv`
 - `data/common_voltage_levels_us_quick_reference.csv`
 
+## Temperature Sensors and Resistance
+
+- `docs/temperature-sensors-rtd-pt100.md`
+
+## Heat Trace and Freeze Protection
+
+- `docs/heat-trace-basics.md`
+
 ## Embedded Communications (UART/SPI/I2C/Modbus RS-485)
 
 - `docs/communications-uart-spi-i2c-modbus-rs485.md`

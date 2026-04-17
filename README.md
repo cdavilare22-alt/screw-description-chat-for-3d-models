@@ -35,6 +35,8 @@ This README is the full in-one-place reference for your work:
 - [CNC Operator Quickstart](docs/cnc-operator-quickstart.md)
 - [Electrical, Communications, and PCB Index](docs/electrical-wire-index.md)
 - [Electrical Basics and Wire Sizing](docs/electrical-basics-wire-sizing.md)
+- [Temperature Sensors, RTDs, and PT100](docs/temperature-sensors-rtd-pt100.md)
+- [Heat Trace Basics](docs/heat-trace-basics.md)
 - [PCB Components Primer](docs/pcb-components-primer.md)
 - [EasyEDA PCB Design Guide](docs/easyeda-pcb-design-guide.md)
 - [Embedded Communications Quick Guide](docs/communications-uart-spi-i2c-modbus-rs485.md)
@@ -374,6 +376,44 @@ Fixed-power board example:
 - At `24V` input, input current is about `1A` (`24W / 24V`).
 - At `12V` input, input current is about `2A` (`24W / 12V`).
 - Real designs draw a bit more due to efficiency losses, so always include margin in connector/wire/fuse sizing.
+
+### Temperature, Resistance, and Cold Loads
+
+Cold does not affect every device the same way.
+
+- Copper wire resistance is lower when cold and higher when hot.
+- Simple heater/lamp elements can draw higher inrush current when cold because the element resistance
+  starts lower, then rises as it heats.
+- NTC thermistors do the opposite: they have higher resistance when cold and lower resistance when hot.
+- Motors, pumps, and fans can draw more current in the cold because cold grease, oil, bearings, or
+  fluids increase mechanical load.
+
+If amps rise in cold conditions, identify whether the cause is electrical resistance, mechanical
+load, low supply voltage, or a constant-power supply trying to maintain output power.
+
+RTD quick memory:
+
+- `RTD` means `Resistance Temperature Detector`.
+- `PT100` means a platinum RTD that is `100 ohms` at `0C`.
+- `PT1000` means a platinum RTD that is `1000 ohms` at `0C`.
+- For PT100/PT1000, resistance rises as temperature rises.
+- Full guide: `docs/temperature-sensors-rtd-pt100.md`
+
+Heat trace quick memory:
+
+- Heat trace is electric heating cable used for freeze protection or temperature maintenance.
+- It is a full system: cable, power kit, end seal, thermostat/controller, ground-fault protection,
+  insulation, weatherproofing, and labels.
+- Self-regulating cable produces more heat when colder and less heat when warmer, but it still must
+  be installed exactly as the product manual allows.
+- Heat trace usually needs thermal insulation. Missing or wet insulation can make a good cable look
+  like a bad system.
+- A controller often reads a temperature sensor, switches heater power, and may measure current or
+  power to prove the heater is actually working.
+- Real controller hardware may include RTD inputs, a MAX31865-style RTD interface, relay/SSR/triac
+  outputs, energy-metering chips, and Modbus/RS485 communication.
+- Do not overlap, cut, splice, or power heat trace unless the exact product instructions allow it.
+- Full guide: `docs/heat-trace-basics.md`
 
 ### 2) Wire Gauge Memory Points
 
