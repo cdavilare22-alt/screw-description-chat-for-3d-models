@@ -1,6 +1,6 @@
-# Shop Reference: Mechanical + Electrical + Communications (All-In-One)
+# Work and Study Reference: Mechanical + Electrical + Communications
 
-This README is the full in-one-place reference for your work:
+This README is a practical reference for work tasks, study notes, and shop/lab topics:
 
 - Section 1: Screw sizes, measuring, hole selection, Fusion/3D mount workflows
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
@@ -35,6 +35,7 @@ This README is the full in-one-place reference for your work:
 - [CNC Operator Quickstart](docs/cnc-operator-quickstart.md)
 - [Electrical, Communications, and PCB Index](docs/electrical-wire-index.md)
 - [Electrical Basics and Wire Sizing](docs/electrical-basics-wire-sizing.md)
+- [Heat Trace Control Panel Glossary](docs/heat-trace-control-panel-glossary.md)
 - [Temperature Sensors, RTDs, and PT100](docs/temperature-sensors-rtd-pt100.md)
 - [Heat Trace Basics](docs/heat-trace-basics.md)
 - [PCB Components Primer](docs/pcb-components-primer.md)
@@ -402,6 +403,8 @@ RTD quick memory:
 Heat trace quick memory:
 
 - Heat trace is electric heating cable used for freeze protection or temperature maintenance.
+- Control panels for heat trace usually combine power protection, temperature inputs, controller
+  logic, output switching, labels, and field terminals.
 - It is a full system: cable, power kit, end seal, thermostat/controller, ground-fault protection,
   insulation, weatherproofing, and labels.
 - Self-regulating cable produces more heat when colder and less heat when warmer, but it still must
@@ -413,6 +416,7 @@ Heat trace quick memory:
 - Real controller hardware may include RTD inputs, a MAX31865-style RTD interface, relay/SSR/triac
   outputs, energy-metering chips, and Modbus/RS485 communication.
 - Do not overlap, cut, splice, or power heat trace unless the exact product instructions allow it.
+- Panel glossary: `docs/heat-trace-control-panel-glossary.md`
 - Full guide: `docs/heat-trace-basics.md`
 
 ### 2) Wire Gauge Memory Points

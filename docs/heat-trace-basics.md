@@ -3,6 +3,10 @@
 This guide explains electric heat trace for someone who is new to it and may need to inspect,
 understand, or help work around heat-traced equipment.
 
+For control-panel part names and acronyms, also see:
+
+- `docs/heat-trace-control-panel-glossary.md`
+
 ## What Heat Trace Is
 
 Heat trace is an electric heating cable installed along a pipe, valve, tank, roof edge, gutter, or

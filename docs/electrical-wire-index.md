@@ -23,6 +23,7 @@ This section covers wire sizing and power basics, plus communications and PCB re
 
 ## Heat Trace and Freeze Protection
 
+- `docs/heat-trace-control-panel-glossary.md`
 - `docs/heat-trace-basics.md`
 
 ## Embedded Communications (UART/SPI/I2C/Modbus RS-485)
