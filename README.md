@@ -1,6 +1,8 @@
-# Work and Study Reference: Mechanical + Electrical + Communications
+# Internship Work Reference: Mechanical + Electrical + Communications
 
-This README is a practical reference for work tasks, study notes, and shop/lab topics:
+This README is a practical reference for internship work tasks, study notes, and
+shop/lab topics. It is also the repo to look for when searching names like
+`internship work reference`, `intern shop reference`, or `shop internship reference`.
 
 - Section 1: Screw sizes, measuring, hole selection, Fusion/3D mount workflows
 - Section 2: Wire gauge, ampacity, volts/amps/watts, and electrical quick math
@@ -9,6 +11,7 @@ This README is a practical reference for work tasks, study notes, and shop/lab t
 
 ## Quick Navigation
 
+- [Internship Reference Locator](INTERNSHIP_REFERENCE.md)
 - [Section 1: Mechanical Index](docs/mechanical-fasteners-index.md)
 - [CNC Quickstart (Buttons + XYZ Zero)](docs/cnc-operator-quickstart.md)
 - [Section 2: Electrical/Comms/PCB Index](docs/electrical-wire-index.md)
